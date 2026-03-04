@@ -121,7 +121,7 @@ const CreditCalculator = ({ onResultsChange }: Props) => {
                 <div className="credit-calc-field__input-wrap">
                   <input
                     type="number"
-                    className="credit-calc-field__input"
+                    className="credit-calc-field__input text-black"
                     min={1}
                     max={100}
                     step={0.5}
@@ -143,7 +143,7 @@ const CreditCalculator = ({ onResultsChange }: Props) => {
                   <input
                     type="text"
                     inputMode="numeric"
-                    className="credit-calc-field__input"
+                    className="credit-calc-field__input text-black"
                     value={priceDisplay}
                     onChange={(e) => handlePriceInput(e.target.value)}
                     placeholder="50 000 000"
@@ -163,7 +163,7 @@ const CreditCalculator = ({ onResultsChange }: Props) => {
                   <input
                     type="text"
                     inputMode="numeric"
-                    className="credit-calc-field__input"
+                    className="credit-calc-field__input text-black"
                     value={downDisplay}
                     onChange={(e) => handleDownInput(e.target.value)}
                     placeholder="0"
@@ -199,7 +199,7 @@ const CreditCalculator = ({ onResultsChange }: Props) => {
                 </label>
                 <input
                   type="range"
-                  className="credit-calc-field__slider"
+                  className="credit-calc-field__slider text-black"
                   min={0}
                   max={36}
                   step={0.5}

@@ -17,7 +17,6 @@ import HomeThree from "@/pages/home-three";
 import HomeThreeSingle from "@/pages/home-three-single";
 import HomeTwo from "@/pages/home-two";
 import HomeTwoSingle from "@/pages/home-two-single";
-import Pricing from "@/pages/pricing";
 import Project from "@/pages/project";
 import ProjectCarousel from "@/pages/project-carousel";
 import ProjectDetails from "@/pages/project-details";
@@ -82,10 +81,7 @@ export const router = createBrowserRouter([
                 path:'/team-details',
                 element:<TeamDetails/>
             },
-            {
-                path:'/pricing',
-                element:<Pricing/>
-            },
+       
             {
                 path:'/faq',
                 element:<Faq/>

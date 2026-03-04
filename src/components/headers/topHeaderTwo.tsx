@@ -25,11 +25,11 @@ const TopHeaderTwo = () => {
                     <ul className="contact-list">
                         <li>
                             <i className="far fa-envelope" />
-                            <Link to="mailto:info@example.com" className="link">info@example.com</Link>
+                            <Link to="mailto:info@example.com" className="link">garantsunenergy@gmail.com</Link>
                         </li>
                         <li>
                             <i className="fa-solid fa-phone-volume" />
-                            <Link to="tel:2086660112">+208-666-0112</Link>
+                            <Link to="tel:2086660112">+998952431001</Link>
                         </li>
                     </ul>
                     <div className="top-right">

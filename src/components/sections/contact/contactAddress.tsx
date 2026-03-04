@@ -15,7 +15,7 @@ const ContactAddress = () => {
                     <div className="content">
                         <p>Call Us 7/24</p>
                         <h3>
-                            <Link to="tel:+2085550112">+208-555-0112</Link>
+                            <Link to="tel:+2085550112">+998-952-431-001</Link>
                         </h3>
                     </div>
                 </div>
@@ -30,7 +30,7 @@ const ContactAddress = () => {
                     <div className="content">
                         <p>Make a Quote</p>
                         <h3>
-                            <Link to="mailto:infotech@gmail.com">Solar@gmail.com</Link>
+                            <Link to="mailto:infotech@gmail.com">garantsunenergy@gmail.com</Link>
                         </h3>
                     </div>
                 </div>
@@ -44,7 +44,7 @@ const ContactAddress = () => {
                     <div className="content">
                         <p>Location</p>
                         <h3>
-                            4517 Washington ave.
+                            Uzbekistan, Karakalpakstan, Nukus
                         </h3>
                     </div>
                 </div>

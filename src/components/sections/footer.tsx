@@ -5,19 +5,19 @@ const contactInfo = [
     {
         icon: <SuCallMessage />,
         label: "Call Us 7/24",
-        value: "+208-555-0112",
-        link: "tel:+2085550112",
+        value: "+998-555-01-12",
+        link: "tel:+9985550112",
     },
     {
         icon: <SuEmail />,
         label: "Make a Quote",
-        value: "Solar@gmail.com",
-        link: "mailto:infotech@gmail.com",
+        value: "garantsunenergy@gmail.com",
+        link: "#",
     },
     {
         icon: <SuLocation />,
         label: "Location",
-        value: "4517 Washington ave.",
+        value: "Uzbekistan, Karakalpakstan, Nukus",
     },
 ];
 
@@ -160,35 +160,7 @@ const Footer = () => {
                             className="col-xl-4 col-lg-4 col-md-6 wow slideUp"
                             data-delay=".7"
                         >
-                            <div className="single-footer-widget style-margin">
-                                <div className="widget-head">
-                                    <h3>Recent Posts</h3>
-                                </div>
-                                <div className="recent-post-area">
-                                    {recentPosts.map((post, index) => (
-                                        <div
-                                            key={index}
-                                            className={`recent-post-items ${index === recentPosts.length - 1 ? "mb-0" : ""
-                                                }`}
-                                        >
-                                            <div className="thumb">
-                                                <img src={post.image} alt="post-img" />
-                                            </div>
-                                            <div className="content">
-                                                <ul className="post-date">
-                                                    <li>
-                                                        <i className="fa-solid fa-calendar-days me-2" />
-                                                        {post.date}
-                                                    </li>
-                                                </ul>
-                                                <h6>
-                                                    <Link to={post.link}>{post.title}</Link>
-                                                </h6>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -197,8 +169,7 @@ const Footer = () => {
                 <div className="container">
                     <div className="footer-wrapper d-flex align-items-center justify-content-between">
                         <p className="wow slideLeft color-2" data-delay=".3">
-                            © All Copyright 2025 by <Link to="/">Garant Sun Energy</Link> {" "}
-                             • Distributed by <Link to="https://themewagon.com" target="_blank">ThemeWagon</Link>
+                            © All Copyright 2026 by <Link to="/">Garant Sun Energy</Link> {" "}
                         </p>
                         <ul className="footer-menu wow slideRight" data-delay=".5">
                             <li>

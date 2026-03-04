@@ -7,7 +7,6 @@ import MarqueOne from '@/components/sections/marques/marqueOne'
 import MarqueTwo from '@/components/sections/marques/marqueTwo'
 import NewsLetter from '@/components/sections/newsLetter'
 import PartnersOne from '@/components/sections/partners/partnersOne'
-import PriceGridOne from '@/components/sections/pricing/priceGridOne'
 import ProjectsOne from '@/components/sections/projects/projectsOne'
 import ServicesOne from '@/components/sections/services/servicesOne'
 import TeamesOne from '@/components/sections/teames/teamesOne'
@@ -25,7 +24,6 @@ const HomeOneSingle = () => {
             <MarqueTwo />
             <TestimonialOne />
             <TeamesOne />
-            <PriceGridOne />
             <FaqHomeOne />
             <BlogsOne />
             <NewsLetter />

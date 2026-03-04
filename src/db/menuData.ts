@@ -96,10 +96,7 @@ export const menuData: MenuItemDataType[] = [
           { title: 'Team Carousel', link: '/team-carousel' },
           { title: 'Team Details', link: '/team-details' },
         ],
-      },
-      { title: 'Pricing', link: '/pricing' },
-      { title: 'Faq\'s', link: '/faq' },
-      { title: '404 Page', link: '/404' },
+      }
     ],
   },
   {
