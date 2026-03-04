@@ -1,0 +1,276 @@
+@use "_variables" as *;
+@use "_mixins" as *;
+
+.calculator-section {
+  background: $bg-color;
+}
+
+/* ---------- Input card ---------- */
+.calculator-card {
+  background: $white;
+  border-radius: 12px;
+  padding: 35px 30px;
+  box-shadow: $shadow;
+  height: 100%;
+
+  &__title {
+    color: $header-color;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    i {
+      color: $theme-color;
+    }
+  }
+}
+
+/* ---------- Form fields ---------- */
+.calculator-field {
+  margin-bottom: 22px;
+
+  &__label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: $header-color;
+    margin-bottom: 8px;
+
+    strong {
+      color: $theme-color;
+    }
+  }
+
+  &__slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    border-radius: 3px;
+    background: $border-color;
+    outline: none;
+    cursor: pointer;
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: $theme-color;
+      border: 3px solid $white;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+      cursor: pointer;
+      @include transition;
+    }
+
+    &::-moz-range-thumb {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: $theme-color;
+      border: 3px solid $white;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+      cursor: pointer;
+    }
+  }
+
+  &__range-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: $text-color;
+    margin-top: 4px;
+  }
+
+  &__select,
+  &__input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid $border-color;
+    border-radius: 8px;
+    font-size: 15px;
+    color: $header-color;
+    background: $white;
+    outline: none;
+    @include transition;
+
+    &:focus {
+      border-color: $theme-color;
+      box-shadow: 0 0 0 3px rgba(29, 143, 44, 0.12);
+    }
+  }
+
+  &__select {
+    cursor: pointer;
+  }
+}
+
+/* ---------- Calculate button ---------- */
+.calculator-btn {
+  width: 100%;
+  justify-content: center;
+  margin-top: 8px;
+
+  .button-icon {
+    margin-right: 8px;
+  }
+}
+
+/* ---------- Results ---------- */
+.calculator-results {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.calculator-stat {
+  background: $white;
+  border-radius: 12px;
+  padding: 24px 20px;
+  text-align: center;
+  box-shadow: $shadow;
+  height: 100%;
+  @include transition;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.10);
+  }
+
+  &__icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: $white;
+  }
+
+  &__value {
+    font-size: 28px;
+    font-weight: 800;
+    color: $header-color;
+    line-height: 1.2;
+
+    @include breakpoint(max-sm) {
+      font-size: 22px;
+    }
+  }
+
+  &__unit {
+    font-size: 14px;
+    font-weight: 600;
+    opacity: 0.7;
+  }
+
+  &__label {
+    font-size: 13px;
+    color: $text-color;
+    margin-top: 6px;
+    font-weight: 500;
+  }
+
+  &--primary .calculator-stat__icon {
+    background: $theme-color;
+  }
+
+  &--accent .calculator-stat__icon {
+    background: #f6a000;
+  }
+
+  &--success .calculator-stat__icon {
+    background: #17a2b8;
+  }
+
+  &--savings .calculator-stat__icon {
+    background: #28a745;
+  }
+}
+
+/* ---------- Detail card ---------- */
+.calculator-detail-card {
+  background: $white;
+  border-radius: 12px;
+  padding: 20px 24px;
+  box-shadow: $shadow;
+  flex: 1;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $border-color;
+    }
+  }
+
+  &__label {
+    font-size: 14px;
+    font-weight: 600;
+    color: $text-color;
+
+    i {
+      color: $theme-color;
+      margin-right: 8px;
+      width: 18px;
+      text-align: center;
+    }
+  }
+
+  &__value {
+    font-size: 14px;
+    font-weight: 600;
+    color: $header-color;
+    text-align: right;
+
+    &--highlight {
+      color: $theme-color;
+      font-size: 16px;
+      font-weight: 700;
+    }
+  }
+}
+
+/* ---------- Empty / placeholder state ---------- */
+.calculator-empty {
+  background: $white;
+  border-radius: 12px;
+  padding: 60px 40px;
+  text-align: center;
+  box-shadow: $shadow;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  i {
+    font-size: 48px;
+    color: $theme-color;
+    margin-bottom: 20px;
+    opacity: 0.6;
+  }
+
+  h4 {
+    color: $header-color;
+    margin-bottom: 12px;
+  }
+
+  p {
+    color: $text-color;
+    max-width: 360px;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+}

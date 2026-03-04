@@ -1,3 +1,6 @@
+@use "_variables" as *;
+@use "_mixins" as *;
+
 .pricing-section {
     position: relative;
     z-index: 9;

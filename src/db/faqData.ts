@@ -1,7 +1,7 @@
 export const faqData = [
   {
     id: 'faq1',
-    question: 'How to use Solaren?',
+    question: 'How to get started with Garant Sun Energy?',
     answer: 'There are many variations of passages Lorem Ipsum but the majority have suffered alteration in some form, by injected humor.',
     delay: '.3',
     isOpen: false

@@ -1,3 +1,6 @@
+@use "_variables" as *;
+@use "_mixins" as *;
+
 .project-items {
     .project-image {
         position: relative;

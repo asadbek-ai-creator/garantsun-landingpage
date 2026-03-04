@@ -32,7 +32,7 @@ const AboutTwo = () => {
                             <div className="about-content">
                                 <SectionTitle>
                                     <SectionTitle.SubTitle>About Us</SectionTitle.SubTitle>
-                                    <SectionTitle.Title>Welcome To Solaren Solar Power <span>Energy System</span></SectionTitle.Title>
+                                    <SectionTitle.Title>Welcome To Garant Sun <span>Energy</span></SectionTitle.Title>
                                 </SectionTitle>
                                 <p className="mt-3 mt-md-0 wow slideUp" data-delay=".5">
                                     It is a long established fact that a reader will be distracted the readable <br /> content of a page when looking at layout the point.

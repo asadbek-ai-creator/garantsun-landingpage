@@ -11,9 +11,9 @@ const ServicesOne = () => {
       <div className="container">
         <div className="section-title-area">
           <SectionTitle>
-            <SectionTitle.SubTitle>Services We Offer</SectionTitle.SubTitle>
+            <SectionTitle.SubTitle>Our Services</SectionTitle.SubTitle>
             <SectionTitle.Title>
-              Provide Comprehensive Ecological<br /> Service
+              Complete Solar Energy<br /> Solutions
             </SectionTitle.Title>
           </SectionTitle>
           <div className="array-button">
@@ -62,7 +62,7 @@ const ServicesOne = () => {
           </Swiper>
           <div className="service-text wow slideUp" data-delay=".4">
             <h6>
-              Solar Power System.  <Link to="/service">View Services </Link>
+              Garant Sun Energy.  <Link to="/service">View All Services </Link>
             </h6>
           </div>
         </div>

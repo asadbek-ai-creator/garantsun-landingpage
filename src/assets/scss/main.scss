@@ -1,8 +1,69 @@
+//>> Mixins <<//
+@use "_mixins" as *;
+//>> Variables <<//	
+@use "_variables" as *;
+//>> Buttons <<//
+@use "_buttons" as *;
+//>> Typography <<//
+@use "_typography" as *;
+//>> Custom Dropdown <<//
+@use "_customDropdown" as *;
+//>> About <<//
+@use "_about" as *;
+//>> Animation <<//
+@use "_animation" as *;
+//>> Brand <<//
+@use "_brand" as *;
+//>> Calculator <<//
+@use "_calculator" as *;
+//>> Credit Calculator <<//
+@use "_credit-calculator" as *;
+//>> Contact <<//
+@use "_contact" as *;
+//>> Order Form <<//
+@use "_order-form" as *;
+//>> Lead Form <<//
+@use "_lead-form" as *;
+//>> Cta <<//
+@use "_cta" as *;
+//>> Faq <<//
+@use "_faq" as *;
+//>> Feature <<//
+@use "_feature" as *;
+//>> Footer <<//
+@use "_footer" as *;
+//>> Header <<//
+@use "_header" as *;
+//>> Helping <<//
+@use "_helping" as *;
+//>> Hero <<//
+@use "_hero" as *;
+//>> Marquee <<//
+@use "_marquee" as *;
+//>> MeanMenu <<//
+@use "_meanmenu" as *;
+//>> News <<//
+@use "_news" as *;
+//>> Pricing <<//
+@use "_pricing" as *;
+//>> Preloader <<//
+@use "_preloader" as *;
+//>> Project <<//
+@use "_project" as *;
+//>> Section <<//
+@use "_section" as *;
+//>> Service <<//
+@use "_service" as *;
+//>> Team <<//
+@use "_team" as *;
+//>> Testimonial <<//
+@use "_testimonial" as *;
+
 /*
-Theme Name: Sungo 
+Theme Name: Garant Sun Energy
 Author: theme_ocean
 Author URI: https://themeforest.net/user/theme_ocean
-Description: Sungo - Ecology & Solar Energy HTML Template<
+Description: Garant Sun Energy - Reliable Solar Energy Solutions
 Version: 1.0.0
 */
 
@@ -10,85 +71,3 @@ Version: 1.0.0
 
 //>> Bootstrap <<//
 @import "bootstrap/dist/css/bootstrap.min.css";
-
-//>> Basic Start <<//
-
-//>> Mixins <<//
-@import "_mixins";
-//>> Variables <<//	
-@import "_variables";
-//>> Buttons <<//
-@import "_buttons";
-//>> Typography <<//
-@import "_typography";
-//>> Basic End <<//	
-
-@import "_customDropdown";
-
-//>> Template Section Style Start <<//
-
-//>> About <<//
-@import "_about";
-
-//>> Animation <<//
-@import "_animation";
-
-//>> Brand <<//
-@import "_brand";
-
-//>> Contact <<//
-@import "_contact";
-
-//>> Cta <<//
-@import "_cta";
-
-//>> Faq <<//
-@import "_faq";
-
-//>> Feature <<//
-@import "_feature";
-
-//>> Footer <<//
-@import "_footer";
-
-//>> Header <<//
-@import "_header";
-
-//>> Helping <<//
-@import "_helping";
-
-//>> Hero <<//
-@import "_hero";
-
-//>> Marquee <<//
-@import "_marquee";
-
-//>> MeanMenu <<//
-@import "_meanmenu";
-
-//>> News <<//
-@import "_news";
-
-//>> Pricing <<//
-@import "_pricing";
-
-//>> Preloader <<//
-@import "_preloader";
-
-//>> Project <<//
-@import "_project";
-
-//>> Section <<//
-@import "_section";
-
-//>> Service <<//
-@import "_service";
-
-//>> Team <<//
-@import "_team";
-
-//>> Testimonial <<//
-@import "_testimonial";
-
-//>> Template Section Style End <<//
-

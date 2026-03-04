@@ -1,0 +1,235 @@
+@use "_variables" as *;
+@use "_mixins" as *;
+
+/* ========================================
+   Lead Form Section
+   ======================================== */
+.lead-form-section {
+  background: $header-color;
+  position: relative;
+  overflow: hidden;
+
+  .section-title {
+    span {
+      color: $theme-color;
+    }
+
+    h2 {
+      color: $white;
+    }
+  }
+}
+
+/* ---------- Summary card ---------- */
+.lead-form-summary {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 28px 24px;
+  height: 100%;
+
+  @include breakpoint(max-md) {
+    padding: 20px;
+    margin-bottom: 8px;
+  }
+
+  &__title {
+    color: $white;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    i {
+      color: $theme-color;
+      margin-right: 10px;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      span {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 13px;
+      }
+
+      strong {
+        color: $white;
+        font-size: 14px;
+      }
+    }
+
+    .lead-form-summary__total {
+      margin-top: 8px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      border-bottom: none;
+
+      span {
+        color: rgba(255, 255, 255, 0.85);
+        font-weight: 600;
+        font-size: 14px;
+      }
+
+      strong {
+        color: $theme-color;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+/* ---------- Form card ---------- */
+.lead-form-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 32px 28px;
+
+  @include breakpoint(max-md) {
+    padding: 22px 18px;
+  }
+}
+
+/* ---------- Form fields ---------- */
+.lead-form-field {
+  label {
+    display: block;
+    color: $white;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  input,
+  select {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 8px;
+    background: transparent;
+    color: $white;
+    font-size: 15px;
+    outline: none;
+    @include transition;
+
+    @include breakpoint(max-sm) {
+      padding: 12px 14px;
+    }
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.35);
+    }
+
+    &:focus {
+      border-color: $theme-color;
+      box-shadow: 0 0 0 3px rgba(29, 143, 44, 0.15);
+    }
+
+    &.has-error {
+      border-color: #e74c3c;
+    }
+  }
+
+  select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23ffffff' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 40px;
+    cursor: pointer;
+
+    option {
+      background: $header-color;
+      color: $white;
+    }
+  }
+
+  &__error {
+    display: block;
+    color: #e74c3c;
+    font-size: 13px;
+    margin-top: 6px;
+  }
+}
+
+/* ---------- Submit button ---------- */
+.lead-form-submit {
+  width: 100%;
+  justify-content: center;
+  padding: 16px 32px !important;
+  font-size: 16px !important;
+}
+
+/* ---------- Success state ---------- */
+.lead-form-success {
+  text-align: center;
+  padding: 48px 24px;
+
+  &__icon {
+    font-size: 64px;
+    color: $theme-color;
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    color: $white;
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 420px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+}
+
+/* ---------- Error banner ---------- */
+.lead-form-error {
+  background: rgba(231, 76, 60, 0.12);
+  border: 1px solid rgba(231, 76, 60, 0.3);
+  border-radius: 8px;
+  padding: 12px 18px;
+  color: #e74c3c;
+  font-size: 14px;
+
+  i {
+    margin-right: 8px;
+  }
+}
+
+/* ---------- Loading spinner ---------- */
+.lead-form-spinner {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: $white;
+  border-radius: 50%;
+  animation: lead-spin 0.6s linear infinite;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+@keyframes lead-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

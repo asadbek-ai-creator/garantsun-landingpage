@@ -1,0 +1,218 @@
+@use "_variables" as *;
+@use "_mixins" as *;
+
+.order-form-section {
+  background-color: #1a1a2e;
+  position: relative;
+  overflow: hidden;
+
+  .section-title {
+    span {
+      color: #86c425;
+    }
+
+    h2 {
+      color: $white;
+    }
+  }
+}
+
+.order-form-results-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 30px;
+  height: 100%;
+
+  @include breakpoint(max-md) {
+    padding: 20px;
+  }
+
+  .results-card-title {
+    color: $white;
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    i {
+      color: #86c425;
+      margin-right: 10px;
+    }
+  }
+
+  .results-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &.total-row {
+        margin-top: 10px;
+        padding-top: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+        border-bottom: none;
+
+        .results-label {
+          font-weight: 700;
+          font-size: 16px;
+          color: $white;
+        }
+
+        .results-value {
+          font-weight: 700;
+          font-size: 18px;
+          color: #86c425;
+        }
+      }
+    }
+
+    .results-label {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 14px;
+    }
+
+    .results-value {
+      color: $white;
+      font-weight: 600;
+      font-size: 14px;
+    }
+  }
+}
+
+.order-form-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 30px;
+
+  @include breakpoint(max-md) {
+    padding: 20px;
+  }
+
+  .contact-form-items {
+    .form-clt {
+      span {
+        color: $white;
+        margin-bottom: 10px;
+        display: inline-block;
+        font-weight: 600;
+      }
+
+      input,
+      select {
+        width: 100%;
+        outline: none;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        background-color: transparent;
+        color: $white;
+        padding: 14px 20px;
+        border-radius: 5px;
+        @include transition;
+
+        @include breakpoint(max-sm) {
+          padding: 12px 16px;
+        }
+
+        &::placeholder {
+          color: rgba(255, 255, 255, 0.4);
+        }
+
+        &:focus {
+          border-color: #86c425;
+        }
+
+        &.input-error {
+          border-color: #e74c3c;
+        }
+      }
+
+      select {
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23ffffff' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 16px center;
+        padding-right: 40px;
+        cursor: pointer;
+
+        option {
+          background-color: #1a1a2e;
+          color: $white;
+        }
+      }
+
+      .field-error {
+        display: block;
+        color: #e74c3c;
+        font-size: 13px;
+        margin-top: 6px;
+      }
+    }
+  }
+}
+
+.order-form-message {
+  text-align: center;
+  padding: 40px 20px;
+
+  &.success-message {
+    .success-icon {
+      font-size: 64px;
+      color: #86c425;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      color: $white;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: rgba(255, 255, 255, 0.7);
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  }
+
+  &.error-inline {
+    background: rgba(231, 76, 60, 0.15);
+    border: 1px solid rgba(231, 76, 60, 0.3);
+    border-radius: 5px;
+    padding: 12px 20px;
+    color: #e74c3c;
+    text-align: left;
+    font-size: 14px;
+
+    i {
+      margin-right: 8px;
+    }
+  }
+}
+
+.order-form-spinner {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: $white;
+  border-radius: 50%;
+  animation: order-spin 0.6s linear infinite;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+@keyframes order-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

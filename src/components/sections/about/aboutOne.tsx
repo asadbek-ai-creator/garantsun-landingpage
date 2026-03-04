@@ -30,10 +30,10 @@ const AboutOne = () => {
               <div className="about-content">
                 <SectionTitle>
                   <SectionTitle.SubTitle>About Us</SectionTitle.SubTitle>
-                  <SectionTitle.Title> Welcome To Solaren Solar Power Energy System</SectionTitle.Title>
+                  <SectionTitle.Title> Welcome To Garant Sun Energy</SectionTitle.Title>
                 </SectionTitle>
                 <p className="mt-3 mt-md-0 wow slideUp" data-delay=".5">
-                  Solar companies can offer solar panels, inverters, batteries, and other related services to help individuals businesses transition to energy sources businesses transition to energy sources and sustainable energy alternative.
+                  Garant Sun Energy is a trusted partner in solar energy across Uzbekistan. We supply high-quality solar panels and inverters, provide professional installation, and offer ongoing technical support. Our mission is to make clean, reliable solar energy accessible to homes, businesses, and industries.
                 </p>
                 <div className="about-icon-items">
                   <div className="icon-items wow slideUp" data-delay=".7">
@@ -43,7 +43,7 @@ const AboutOne = () => {
                     <div className="content">
                       <h4>Reliability and Performance</h4>
                       <p>
-                        Lorem ipsum dolor sit amet cut co sect. Proin viverra
+                        High-efficiency ERA Solar panels and GoodWe inverters
                       </p>
                     </div>
                   </div>
@@ -52,9 +52,9 @@ const AboutOne = () => {
                       <img src="/img/about/icon-3.svg" alt="icon-img" />
                     </div>
                     <div className="content">
-                      <h4>BrightSun Support</h4>
+                      <h4>Professional Support</h4>
                       <p>
-                        Lorem ipsum dolor sit amet cut co sect. Proin viverra
+                        Installation, maintenance, and monitoring across Karakalpakstan
                       </p>
                     </div>
                   </div>

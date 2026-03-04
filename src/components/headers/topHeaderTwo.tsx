@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 
 const options = [
     { value: 'english', label: 'English' },
-    { value: 'bangla', label: 'Bangla' },
-    { value: 'hindi', label: 'Hindi' }
+    { value: 'russian', label: 'Русский' },
 ];
 interface Option {
     value: string;

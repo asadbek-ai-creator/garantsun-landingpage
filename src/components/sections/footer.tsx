@@ -96,8 +96,8 @@ const Footer = () => {
                                 </div>
                                 <div className="footer-content">
                                     <p>
-                                        Phasellus ultricies aliquam volutpat ullamcorper laoreet
-                                        neque, a lacinia curabitur lacinia mollis
+                                        Garant Sun Energy — your trusted partner in solar energy
+                                        across Uzbekistan and Karakalpakstan.
                                     </p>
                                     <div className="social-icon d-flex align-items-center">
                                         <Link to="#">
@@ -197,7 +197,7 @@ const Footer = () => {
                 <div className="container">
                     <div className="footer-wrapper d-flex align-items-center justify-content-between">
                         <p className="wow slideLeft color-2" data-delay=".3">
-                            © All Copyright 2025 by <Link to="index">Solar</Link> {" "}
+                            © All Copyright 2025 by <Link to="/">Garant Sun Energy</Link> {" "}
                              • Distributed by <Link to="https://themewagon.com" target="_blank">ThemeWagon</Link>
                         </p>
                         <ul className="footer-menu wow slideRight" data-delay=".5">

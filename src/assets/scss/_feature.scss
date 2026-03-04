@@ -1,3 +1,6 @@
+@use "_variables" as *;
+@use "_mixins" as *;
+
 .achievement-section {
     margin-top: -200px;
     position: relative;

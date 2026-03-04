@@ -25,7 +25,7 @@ const AboutThree = () => {
                             <div className="about-content">
                                 <SectionTitle>
                                     <SectionTitle.SubTitle>ABOUT US</SectionTitle.SubTitle>
-                                    <SectionTitle.Title>Welcome To Solaren Solar Power Energy System</SectionTitle.Title>
+                                    <SectionTitle.Title>Welcome To Garant Sun Energy</SectionTitle.Title>
                                 </SectionTitle>
                                 <p className="mt-3 mt-md-0 wow slideUp" data-delay=".5">
                                     It is a long established fact that a reader will be distracted the readable <br /> content of a page when looking at layout the point.

@@ -1,3 +1,6 @@
+@use "_variables" as *;
+@use "_mixins" as *;
+
 .brand-wrapper {
     h6 {
         font-size: 22px;

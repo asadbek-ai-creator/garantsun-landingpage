@@ -12,16 +12,16 @@ export interface ServiceDataType {
 export const serviceOneData: ServiceDataType[] = [
     {
         id: 1,
-        title: "Weed Extraction",
-        description: "For your car we will do everything advice repairs",
+        title: "Solar Panel Sales",
+        description: "Premium ERA Solar panels for residential, commercial, and industrial use",
         icon: "/img/service/icon/s-icon-1.svg",
         link: "/service-details",
         delay:'.3'
     },
     {
         id: 2,
-        title: "Pristine Garden",
-        description: "For your car we will do everything advice repairs",
+        title: "Inverter Sales",
+        description: "GoodWe GT Series high-efficiency string inverters",
         icon: "/img/service/icon/s-icon-2.svg",
         link: "/service-details",
         delay:'.5',
@@ -29,50 +29,34 @@ export const serviceOneData: ServiceDataType[] = [
     },
     {
         id: 3,
-        title: "Garden Renewal",
-        description: "For your car we will do everything advice repairs",
+        title: "Project Design & Consultation",
+        description: "Energy demand calculation and system design",
         icon: "/img/service/icon/s-icon-3.svg",
         link: "/service-details",
         delay:'.7'
     },
     {
         id: 4,
-        title: "SolarEdge Services",
-        description: "For your car we will do everything advice repairs",
+        title: "Professional Installation",
+        description: "Certified installation team with years of experience",
         icon: "/img/service/icon/s-icon-4.svg",
         link: "/service-details",
         delay:'.9'
     },
     {
         id: 5,
-        title: "Solar Repair",
-        description: "Mauris ultrices ligula eget volutpat aliquet nullam",
+        title: "Technical Service & Maintenance",
+        description: "Warranty and post-warranty support",
         icon: "/img/service/icon/s-icon-10.svg",
         link: "/service-details",
         delay:'.3'
     },
     {
         id: 6,
-        title: "Power Storage",
-        description: "Mauris ultrices ligula eget volutpat aliquet nullam",
+        title: "Monitoring & Diagnostics",
+        description: "Online system performance monitoring",
         icon: "/img/service/icon/s-icon-11.svg",
         link: "/service-details",
         delay:'.5'
     },
-    {
-        id: 7,
-        title: "Solar Energy",
-        description: "Mauris ultrices ligula eget volutpat aliquet nullam",
-        icon: "/img/service/icon/s-icon-1.svg",
-        link: "/service-details",
-        delay:'.7'
-    },
-    {
-        id: 8,
-        title: "SolarEdge Services",
-        description: "Mauris ultrices ligula eget volutpat aliquet nullam",
-        icon: "/img/service/icon/s-icon-2.svg",
-        link: "/service-details",
-        delay:'.9'
-    }
 ];
