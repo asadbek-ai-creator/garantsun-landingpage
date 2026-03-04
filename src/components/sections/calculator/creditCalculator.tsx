@@ -200,6 +200,9 @@ const CreditCalculator = ({ onResultsChange }: Props) => {
                 <input
                   type="range"
                   className="credit-calc-field__slider text-black"
+
+
+                  
                   min={0}
                   max={36}
                   step={0.5}

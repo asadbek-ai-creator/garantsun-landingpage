@@ -37,21 +37,6 @@ const services = [
     { text: "License", link: "/service-details" },
 ];
 
-const recentPosts = [
-    {
-        image: "/img/news/pp1.jpg",
-        date: "20 Feb, 2025",
-        title: "2021 Batterman Award honors Brad Burkhart",
-        link: "/news-details",
-    },
-    {
-        image: "/img/news/pp2.jpg",
-        date: "15 Dec, 2025",
-        title: "2021 Batterman Award honors Brad Burkhart",
-        link: "/news-details",
-    },
-];
-
 const Footer = () => {
     return (
         <footer className="footer-section footer-bg">
