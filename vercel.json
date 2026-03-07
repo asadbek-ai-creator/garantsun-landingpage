@@ -1,5 +1,8 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/" }],
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/server/src/index.ts" },
+    { "source": "/(.*)", "destination": "/" }
+  ],
   "buildCommand": "tsc -b && vite build",
   "env": {
     "CACHE_BUST": "2026-03-04-11-42"

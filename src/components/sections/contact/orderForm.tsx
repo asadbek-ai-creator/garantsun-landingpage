@@ -91,8 +91,9 @@ const OrderForm = ({ calculatorResults }: OrderFormProps) => {
       setAddress("")
       setRegion("")
       setErrors({})
-    } catch {
+    } catch (error) {
       setStatus("error")
+      console.error("Form submission error:", error)
     }
   }
 

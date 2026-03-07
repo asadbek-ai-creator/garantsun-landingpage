@@ -69,7 +69,7 @@ const LeadForm = () => {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          fullName: fullName.trim(),
+          name: fullName.trim(),
           phone,
           region,
           address: address.trim() || null,
@@ -82,8 +82,11 @@ const LeadForm = () => {
       setRegion("")
       setAddress("")
       setErrors({})
-    } catch {
+      alert("Ваша заявка принята! Мы свяжемся с вами.")
+    } catch (error) {
       setStatus("error")
+      console.error("Form submission error:", error)
+      alert("Произошла ошибка при отправке заявки. Пожалуйста, попробуйте позже или свяжитесь с нами напрямую.")
     }
   }
 

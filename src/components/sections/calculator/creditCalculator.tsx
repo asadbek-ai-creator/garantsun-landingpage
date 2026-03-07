@@ -53,11 +53,15 @@ const CreditCalculator = () => {
                   <input
                     type="number"
                     className="credit-calc-field__input"
-                    min={0.5}
-                    max={500}
-                    step={0.5}
+                    min={1}
+                    max={1000}
+                    step={1}
                     value={kw}
-                    onChange={(e) => setKw(Math.max(0.5, Number(e.target.value)))}
+                    onChange={(e) => {
+                      const val = Math.round(Number(e.target.value))
+                      setKw(Math.max(1, val))
+                    }}
+                    onKeyDown={(e) => ['e', 'E', '.', ',', '-'].includes(e.key) && e.preventDefault()}
                   />
                   <span className="credit-calc-field__suffix">kW</span>
                 </div>

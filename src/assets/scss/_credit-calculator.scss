@@ -75,14 +75,17 @@
     border-radius: 10px;
     font-size: 16px;
     font-weight: 600;
-    color: $header-color;
-    background: $white;
+    color: #1a1a1a !important;
+    background: #ffffff !important;
     outline: none;
     @include transition;
 
     &:focus {
       border-color: $theme-color;
       box-shadow: 0 0 0 4px rgba(29, 143, 44, 0.08);
+      color: #1a1a1a !important;
+      background: #ffffff !important;
+      outline: 2px solid #2e7d32;
     }
   }
 
