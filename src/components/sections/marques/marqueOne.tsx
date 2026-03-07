@@ -1,20 +1,20 @@
 import { Fragment } from 'react'
 const textSliderData = [
-    "Solar Pane",
-    "Water Heating",
-    "Solar Financing",
-    "Hydro Power",
-    "Solar Energy",
-    "Solar Pane",
-    "Water Heating",
-    "Solar Financing",
-    "Hydro Power",
-    "Solar Energy",
-    "Solar Pane",
-    "Water Heating",
-    "Solar Financing",
-    "Hydro Power",
-    "Solar Energy"
+    "Солнечные панели",
+    "Нагрев воды",
+    "Финансирование",
+    "Гидроэнергия",
+    "Солнечная энергия",
+    "Солнечные панели",
+    "Нагрев воды",
+    "Финансирование",
+    "Гидроэнергия",
+    "Солнечная энергия",
+    "Солнечные панели",
+    "Нагрев воды",
+    "Финансирование",
+    "Гидроэнергия",
+    "Солнечная энергия"
 ];
 const MarqueOne = () => {
     return (

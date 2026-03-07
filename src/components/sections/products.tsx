@@ -4,41 +4,41 @@ const productsData = [
   {
     id: 1,
     title: "ERA Solar Eagle Pro-66HD",
-    subtitle: "N-Type Bifacial Double Glass Solar Panel",
+    subtitle: "Двусторонняя двустекольная солнечная панель N-типа",
     image: "/img/project/01.jpg",
     specs: [
-      { label: "Power Range", value: "695–720W" },
-      { label: "Max Efficiency", value: "23.18%" },
-      { label: "Cells", value: "132 cells, MBB Half-Cut, 210×105mm mono Si" },
-      { label: "Power Tolerance", value: "0~+5W (positive)" },
-      { label: "Voc / Isc", value: "48.43–49.24V / 18.30–18.55A" },
-      { label: "Dimensions", value: "2384×1303×33/35mm" },
-      { label: "Weight", value: "37.7/38 kg" },
-      { label: "Features", value: "Dual-glass, IP68 junction box, bifacial" },
-      { label: "Warranty", value: "15-yr product, 30-yr linear power" },
-      { label: "Degradation", value: "<1% yr 1, <0.4% yrs 2–30" },
-      { label: "Certifications", value: "IEC61215, IEC61730, IEC61701, ISO9001, ISO14001, ISO45001" },
+      { label: "Диапазон мощности", value: "695–720 Вт" },
+      { label: "Макс. КПД", value: "23.18%" },
+      { label: "Элементы", value: "132 шт., MBB Half-Cut, 210×105мм, моно Si" },
+      { label: "Допуск мощности", value: "0~+5 Вт (положительный)" },
+      { label: "Vxx / Iкз", value: "48.43–49.24 В / 18.30–18.55 А" },
+      { label: "Габариты", value: "2384×1303×33/35 мм" },
+      { label: "Вес", value: "37.7/38 кг" },
+      { label: "Особенности", value: "Двойное стекло, IP68, двустороннее" },
+      { label: "Гарантия", value: "15 лет на продукт, 30 лет на мощность" },
+      { label: "Деградация", value: "<1% в 1-й год, <0.4% со 2-го по 30-й" },
+      { label: "Сертификаты", value: "IEC61215, IEC61730, IEC61701, ISO9001, ISO14001, ISO45001" },
     ],
     manufacturer: "Zhejiang ERA Solar Technology Co., Ltd.",
   },
   {
     id: 2,
     title: "GoodWe GT Series Inverter",
-    subtitle: "String Inverter for Commercial & Industrial",
+    subtitle: "Сетевой инвертор для коммерческих и промышленных объектов",
     image: "/img/project/02.jpg",
     specs: [
-      { label: "Power", value: "100–125kW, three-phase" },
-      { label: "Models", value: "GW100K-GT, GW110K-GT, GW125K-GT" },
-      { label: "MPPTs", value: "8/10, max efficiency 99.0%" },
-      { label: "Max Input Voltage", value: "1100V DC" },
-      { label: "MPPT Range", value: "180–1000V" },
-      { label: "Max Input Current", value: "21A per string" },
-      { label: "DC Oversizing / AC Overloading", value: "150% / 110%" },
-      { label: "Protection", value: "IP66, Type II SPD (AC & DC)" },
-      { label: "Operating Temp", value: "-30°C to +60°C" },
-      { label: "Weight / Dimensions", value: "85–88 kg / 930×650×300mm" },
-      { label: "Communication", value: "RS485, WiFi+LAN, 4G, Modbus-RTU" },
-      { label: "Features", value: "No derating at 45°C, smart fan, fuse-free" },
+      { label: "Мощность", value: "100–125 кВт, трёхфазный" },
+      { label: "Модели", value: "GW100K-GT, GW110K-GT, GW125K-GT" },
+      { label: "МРТП", value: "8/10, макс. КПД 99.0%" },
+      { label: "Макс. входное напряжение", value: "1100 В DC" },
+      { label: "Диапазон МРТП", value: "180–1000 В" },
+      { label: "Макс. входной ток", value: "21 А на строку" },
+      { label: "Перегрузка DC / AC", value: "150% / 110%" },
+      { label: "Защита", value: "IP66, УЗИП тип II (AC и DC)" },
+      { label: "Раб. температура", value: "-30°C до +60°C" },
+      { label: "Вес / Габариты", value: "85–88 кг / 930×650×300 мм" },
+      { label: "Связь", value: "RS485, WiFi+LAN, 4G, Modbus-RTU" },
+      { label: "Особенности", value: "Без деградации при 45°C, умный вентилятор, без предохранителей" },
     ],
     manufacturer: "GoodWe",
   },
@@ -49,8 +49,8 @@ const Products = () => {
     <section id="products" className="project-section section-padding fix">
       <div className="container">
         <SectionTitle className="text-center">
-          <SectionTitle.SubTitle>Our Products</SectionTitle.SubTitle>
-          <SectionTitle.Title>Premium Solar Equipment</SectionTitle.Title>
+          <SectionTitle.SubTitle>Наша продукция</SectionTitle.SubTitle>
+          <SectionTitle.Title>Премиальное солнечное оборудование</SectionTitle.Title>
         </SectionTitle>
         <div className="row g-4 mt-4">
           {productsData.map((product) => (
@@ -103,7 +103,7 @@ const Products = () => {
                   </tbody>
                 </table>
                 <p style={{ marginTop: "12px", fontSize: "13px", color: "#999" }}>
-                  Manufacturer: {product.manufacturer}
+                  Производитель: {product.manufacturer}
                 </p>
               </div>
             </div>

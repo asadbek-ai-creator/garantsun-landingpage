@@ -12,16 +12,14 @@ const TopHeaderOne = ({ wrapperClass, className }: { wrapperClass?: string, clas
                         </li>
                         <li>
                             <i className="fa-solid fa-phone-volume" />
-                            <Link to="tel:2086660112">+998-952-431-001</Link>
+                            <Link to="tel:+998972421001">+99897 242 10 01</Link>
                         </li>
                     </ul>
                     <div className="top-right">
                         <div className="social-icon d-flex align-items-center">
                             <span>Follow Us:</span>
-                            <Link to="#"><i className="fab fa-facebook-f" /></Link>
-                            <Link to="#"><i className="fa-brands fa-x-twitter"/></Link>
-                            <Link to="#"><i className="fa-brands fa-linkedin-in" /></Link>
-                            <Link to="#"><i className="fa-brands fa-youtube" /></Link>
+                            <Link to="https://www.instagram.com/garant_quyash_panelleri" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram" /></Link>
+                            <Link to="https://t.me/garant_quyash_panelleri" target="_blank" rel="noopener noreferrer"><i className="fab fa-telegram-plane" /></Link>
                         </div>
                     </div>
                 </div>

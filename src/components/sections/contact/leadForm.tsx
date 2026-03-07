@@ -1,27 +1,22 @@
 import { useState, FormEvent, ChangeEvent } from "react"
 import { motion, AnimatePresence } from "motion/react"
 import SectionTitle from "@/components/ui/sectionTitle"
-import type { CreditResults } from "@/components/sections/calculator/creditCalculator"
-
-interface LeadFormProps {
-  creditResults?: CreditResults
-}
 
 const REGIONS = [
-  "Нөкис",
-  "Тошкент",
-  "Самарқанд",
-  "Бухоро",
-  "Андижон",
-  "Фарғона",
+  "Нукус",
+  "Ташкент",
+  "Самарканд",
+  "Бухара",
+  "Андижан",
+  "Фергана",
   "Наманган",
-  "Қашқадарё",
-  "Сурхондарё",
-  "Хоразм",
-  "Навоий",
-  "Жиззах",
-  "Сирдарё",
-  "Қорақалпоғистон",
+  "Кашкадарья",
+  "Сурхандарья",
+  "Хорезм",
+  "Навои",
+  "Джизак",
+  "Сырдарья",
+  "Каракалпакстан",
 ]
 
 type FormStatus = "idle" | "loading" | "success" | "error"
@@ -43,13 +38,7 @@ const isPhoneComplete = (phone: string): boolean => {
   return digits.length === 12
 }
 
-function formatUZS(value: number): string {
-  return Math.round(value)
-    .toString()
-    .replace(/\B(?=(\d{3})+(?!\d))/g, " ")
-}
-
-const LeadForm = ({ creditResults }: LeadFormProps) => {
+const LeadForm = () => {
   const [fullName, setFullName] = useState("")
   const [phone, setPhone] = useState("+998")
   const [region, setRegion] = useState("")
@@ -63,9 +52,9 @@ const LeadForm = ({ creditResults }: LeadFormProps) => {
 
   const validate = (): boolean => {
     const newErrors: Record<string, string> = {}
-    if (!fullName.trim()) newErrors.fullName = "Атыңызды киритиң"
-    if (!isPhoneComplete(phone)) newErrors.phone = "Телефон номерди толық киритиң"
-    if (!region) newErrors.region = "Аймақты таңлаң"
+    if (!fullName.trim()) newErrors.fullName = "Введите ваше имя"
+    if (!isPhoneComplete(phone)) newErrors.phone = "Введите полный номер телефона"
+    if (!region) newErrors.region = "Выберите регион"
     setErrors(newErrors)
     return Object.keys(newErrors).length === 0
   }
@@ -84,7 +73,6 @@ const LeadForm = ({ creditResults }: LeadFormProps) => {
           phone,
           region,
           address: address.trim() || null,
-          calculatorResults: creditResults || null,
         }),
       })
       if (!res.ok) throw new Error("Submission failed")
@@ -103,46 +91,13 @@ const LeadForm = ({ creditResults }: LeadFormProps) => {
     <section id="lead-form" className="lead-form-section section-padding fix">
       <div className="container">
         <SectionTitle className="text-center">
-          <SectionTitle.SubTitle>Байланыс</SectionTitle.SubTitle>
-          <SectionTitle.Title>Заявка қалдырыў</SectionTitle.Title>
+          <SectionTitle.SubTitle>Контакты</SectionTitle.SubTitle>
+          <SectionTitle.Title>Оставить заявку</SectionTitle.Title>
         </SectionTitle>
 
         <div className="row mt-4 mt-md-5 justify-content-center">
-          {/* Credit results summary */}
-          {creditResults && creditResults.creditAmount > 0 && (
-            <div className="col-lg-4 wow slideUp" data-delay=".2">
-              <div className="lead-form-summary">
-                <h4 className="lead-form-summary__title">
-                  <i className="fas fa-calculator" /> Насия шартлары
-                </h4>
-                <ul className="lead-form-summary__list">
-                  <li>
-                    <span>Жәми баҳа</span>
-                    <strong>{formatUZS(creditResults.totalPrice)} сўм</strong>
-                  </li>
-                  <li>
-                    <span>Дәслепки төлем</span>
-                    <strong>{formatUZS(creditResults.downPayment)} сўм</strong>
-                  </li>
-                  <li>
-                    <span>Насия мүддети</span>
-                    <strong>{creditResults.months} ай</strong>
-                  </li>
-                  <li>
-                    <span>Айлық төлем</span>
-                    <strong>{formatUZS(creditResults.monthlyPayment)} сўм</strong>
-                  </li>
-                  <li className="lead-form-summary__total">
-                    <span>Жәми қайтарыў</span>
-                    <strong>{formatUZS(creditResults.totalRepayment)} сўм</strong>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          )}
-
           {/* Form */}
-          <div className={creditResults && creditResults.creditAmount > 0 ? "col-lg-8" : "col-lg-8"}>
+          <div className="col-lg-8">
             <div className="lead-form-card wow slideUp" data-delay=".3">
               <AnimatePresence mode="wait">
                 {status === "success" ? (
@@ -156,14 +111,14 @@ const LeadForm = ({ creditResults }: LeadFormProps) => {
                     <div className="lead-form-success__icon">
                       <i className="fas fa-check-circle" />
                     </div>
-                    <h3>Рахмет!</h3>
-                    <p>Сизиң мүрәжатыңыз қабыл етилди. Мутахассисимиз тез арада сиз бенен байланысады.</p>
+                    <h3>Спасибо!</h3>
+                    <p>Ваша заявка принята. Наш специалист свяжется с вами в ближайшее время.</p>
                     <button
                       type="button"
                       className="theme-btn mt-3"
                       onClick={() => setStatus("idle")}
                     >
-                      Жаңа мүрәжат <i className="fas fa-arrow-right" />
+                      Новая заявка <i className="fas fa-arrow-right" />
                     </button>
                   </motion.div>
                 ) : (
@@ -178,10 +133,10 @@ const LeadForm = ({ creditResults }: LeadFormProps) => {
                     <div className="row g-4">
                       <div className="col-lg-6 wow slideUp" data-delay=".3">
                         <div className="lead-form-field">
-                          <label>Толық аты-жөни *</label>
+                          <label>Полное имя *</label>
                           <input
                             type="text"
-                            placeholder="Атыңыз ҳәм фамилияңыз"
+                            placeholder="Имя и фамилия"
                             value={fullName}
                             onChange={(e) => setFullName(e.target.value)}
                             className={errors.fullName ? "has-error" : ""}
@@ -192,7 +147,7 @@ const LeadForm = ({ creditResults }: LeadFormProps) => {
 
                       <div className="col-lg-6 wow slideUp" data-delay=".5">
                         <div className="lead-form-field">
-                          <label>Телефон номер *</label>
+                          <label>Номер телефона *</label>
                           <input
                             type="tel"
                             placeholder="+998 XX XXX XX XX"
@@ -206,13 +161,13 @@ const LeadForm = ({ creditResults }: LeadFormProps) => {
 
                       <div className="col-lg-6 wow slideUp" data-delay=".3">
                         <div className="lead-form-field">
-                          <label>Аймақ / Қала *</label>
+                          <label>Регион / Город *</label>
                           <select
                             value={region}
                             onChange={(e) => setRegion(e.target.value)}
                             className={errors.region ? "has-error" : ""}
                           >
-                            <option value="">Аймақты таңлаң</option>
+                            <option value="">Выберите регион</option>
                             {REGIONS.map((r) => (
                               <option key={r} value={r}>{r}</option>
                             ))}
@@ -223,10 +178,10 @@ const LeadForm = ({ creditResults }: LeadFormProps) => {
 
                       <div className="col-lg-6 wow slideUp" data-delay=".5">
                         <div className="lead-form-field">
-                          <label>Мәнзил</label>
+                          <label>Адрес</label>
                           <input
                             type="text"
-                            placeholder="Мәнзилиңизди киритиң (мәжбүрий емес)"
+                            placeholder="Введите ваш адрес (необязательно)"
                             value={address}
                             onChange={(e) => setAddress(e.target.value)}
                           />
@@ -241,7 +196,7 @@ const LeadForm = ({ creditResults }: LeadFormProps) => {
                             className="lead-form-error"
                           >
                             <i className="fas fa-exclamation-triangle" />{" "}
-                            Қәтелик жүз берди. Илтимас, қайта урыныңыз.
+                            Произошла ошибка. Пожалуйста, попробуйте снова.
                           </motion.div>
                         </div>
                       )}
@@ -254,11 +209,11 @@ const LeadForm = ({ creditResults }: LeadFormProps) => {
                         >
                           {status === "loading" ? (
                             <>
-                              <span className="lead-form-spinner" /> Жиберилмоқда...
+                              <span className="lead-form-spinner" /> Отправка...
                             </>
                           ) : (
                             <>
-                              Заявка қалдырыў / Оставить заявку <i className="fas fa-arrow-right" />
+                              Оставить заявку <i className="fas fa-arrow-right" />
                             </>
                           )}
                         </button>

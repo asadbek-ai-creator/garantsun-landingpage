@@ -1,4 +1,4 @@
-import { BlogPostDataType } from "@/db/blogPostsThreeData"
+import { BlogPostDataType } from "@/db/blogPostsOneData"
 import { Link } from "react-router-dom"
 
 const BlogCard = ({ news, className }: { news: BlogPostDataType, className?: string }) => {

@@ -1,103 +1,50 @@
+import ayzada from "./ayzada.jpg";
+import berik from "./berik.jpg";
+import davronbek from "./davronbek.jpg";
+import nursultan from "./nursultan.jpg";
+import sultanbek from "./sultanbek.jpg";
 export interface TeamMemberDataType {
     id: number;
-    role: string;
     name: string;
-    description: string;
+    role: string;
+    company: string;
     image: string;
-    socialLinks: {
-        icon: string;
-        link: string;
-    }[];
-    delay: string;
 }
 
 export const teamMembersOneData: TeamMemberDataType[] = [
     {
         id: 1,
-        role: "Scrum Master",
-        name: "Cameron Williamson",
-        description: "Integer at sapien nec sapien sollicitudin ultrices in ut nisl.",
-        image: "/img/team/hover-1.png",
-        socialLinks: [
-            {
-                icon: 'fab fa-facebook-f',
-                link: ''
-            },
-            {
-                icon: 'fab fa-instagram',
-                link: ''
-            },
-            {
-                icon: 'fab fa-linkedin-in',
-                link: ''
-            },
-        ],
-        delay: ".3"
+        name: "Eshbaev Nursultan",
+        role: "Основатель",
+        company: "GARANT SUN ENERGY",
+        image: nursultan
     },
     {
         id: 2,
-        role: "Engineering",
-        name: "Leslie Alexander",
-        description: "Integer at sapien nec sapien sollicitudin ultrices in ut nisl.",
-        image: "/img/team/hover-1.png",
-        socialLinks: [
-            {
-                icon: 'fab fa-facebook-f',
-                link: ''
-            },
-            {
-                icon: 'fab fa-instagram',
-                link: ''
-            },
-            {
-                icon: 'fab fa-linkedin-in',
-                link: ''
-            },
-        ],
-        delay: ".5"
+        name: "Jetkinshekov Sultanbek",
+        role: "Основатель и Директор",
+        company: "GARANT SUN ENERGY",
+        image: sultanbek
     },
     {
         id: 3,
-        role: "UI/UX Designer",
-        name: "Ronald Richards",
-        description: "Integer at sapien nec sapien sollicitudin ultrices in ut nisl.",
-        image: "/img/team/hover-1.png",
-        socialLinks: [
-            {
-                icon: 'fab fa-facebook-f',
-                link: ''
-            },
-            {
-                icon: 'fab fa-instagram',
-                link: ''
-            },
-            {
-                icon: 'fab fa-linkedin-in',
-                link: ''
-            },
-        ],
-        delay: ".7"
+        name: "Kenesbaev Davranbek",
+        role: "Главный менеджер",
+        company: "GARANT SUN ENERGY",
+        image: davronbek
     },
     {
         id: 4,
-        role: "Web Designer",
-        name: "Darrell Steward",
-        description: "Integer at sapien nec sapien sollicitudin ultrices in ut nisl.",
-        image: "/img/team/hover-1.png",
-        socialLinks: [
-            {
-                icon: 'fab fa-facebook-f',
-                link: ''
-            },
-            {
-                icon: 'fab fa-instagram',
-                link: ''
-            },
-            {
-                icon: 'fab fa-linkedin-in',
-                link: ''
-            },
-        ],
-        delay: ".9"
+        name: "Payzullaeva Ayzada",
+        role: "Менеджер по продажам",
+        company: "GARANT SUN ENERGY",
+        image: ayzada
+    },
+    {
+        id: 5,
+        name: "Doshchanov Berik",
+        role: "Старший бригадир",
+        company: "GARANT SUN ENERGY",
+        image: berik
     }
 ];

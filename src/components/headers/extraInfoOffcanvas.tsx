@@ -11,9 +11,6 @@ const ExtraInfoOffcanvas = () => {
 
     return (
         <>
-            <div className="sidebar__toggle" onClick={toggleOffcanvas}>
-                <i className="fas fa-bars" />
-            </div>
             <div className="fix-area">
                 <div className={`offcanvas__info ${isInfoOpen ? 'info-open' : ''}`}>
                     <div className="offcanvas__wrapper">
@@ -67,20 +64,13 @@ const ExtraInfoOffcanvas = () => {
                                             <i className="far fa-phone" />
                                         </div>
                                         <div className="offcanvas__contact-text">
-                                            <Link to="tel:+11002345909">+11002345909</Link>
+                                            <Link to="tel:+11002345909">+998-95-243-10-01</Link>
                                         </div>
                                     </li>
                                 </ul>
-                                <div className="header-button mt-4">
-                                    <Link to="/contact" className="theme-btn text-center">
-                                        <span>get A Quote<i className="fa-solid fa-arrow-right-long" /></span>
-                                    </Link>
-                                </div>
-                                <div className="social-icon d-flex align-items-center">
-                                    <Link to="#"><i className="fab fa-facebook-f" /></Link>
-                                    <Link to="#"><i className="fa-brands fa-x-twitter" /></Link>
-                                    <Link to="#"><i className="fab fa-youtube" /></Link>
-                                    <Link to="#"><i className="fab fa-linkedin-in" /></Link>
+<div className="social-icon d-flex align-items-center">
+                                    <Link to="https://www.instagram.com/garant_quyash_panelleri" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram" /></Link>
+                                    <Link to="https://t.me/garant_quyash_panelleri" target="_blank" rel="noopener noreferrer"><i className="fab fa-telegram-plane" /></Link>
                                 </div>
                             </div>
                         </div>

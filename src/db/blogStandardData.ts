@@ -1,4 +1,4 @@
-import { BlogPostDataType } from "./blogPostsThreeData";
+import { BlogPostDataType } from "./blogPostsOneData";
 
 export const blogStandardData:BlogPostDataType[] = [
     {

@@ -1,4 +1,14 @@
-import { BlogPostDataType } from "./blogPostsThreeData";
+export interface BlogPostDataType {
+    id: number;
+    image: string;
+    date: { day: string; month: string; year: string };
+    title: string;
+    description: string;
+    link: string;
+    author: string;
+    category: string;
+    delay: string;
+}
 
 export const blogPostsOneData: BlogPostDataType[] = [
     {

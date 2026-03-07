@@ -1,53 +1,52 @@
 export const testimonialsOneData = [
     {
-        id:1,
+        id: 1,
         image: "/img/testimonial/01.jpg",
         stars: 5,
-        title: "Testimonials",
-        heading: "What’s Clients Say",
-        content: "Nullam dignissim, ante scelerisque the is euismod fermentum odio sem semper the is erat, a feugiat leo urna eget eros. Duis Aenean a imperdiet risus. Aliquam pellentesque nisi dui eget dapibus enim ornare eu. Morbi nunc metus, maximus eu mauris.",
-        author: "Kathryn Murphy",
-        position: "Web Designer"
+        title: "Отзывы клиентов",
+        heading: "Что говорят наши клиенты",
+        content: "Установили систему 10 кВт. В Каракалпакстане жаркое лето и много солнца — это наше преимущество. Теперь насосы для орошения работают без проблем с электричеством. Экономим 1,8 млн сум в месяц.",
+        author: "Marat Reymov",
+        position: "Фермер, Чимбайский район"
     },
     {
-        id:2,
-        image: "/img/testimonial/01.jpg",
+        id: 2,
+        image: "/img/testimonial/02.jpg",
         stars: 5,
-        title: "Testimonials",
-        heading: "What’s Clients Say",
-        content: "Nullam dignissim, ante scelerisque the is euismod fermentum odio sem semper the is erat, a feugiat leo urna eget eros. Duis Aenean a imperdiet risus. Aliquam pellentesque nisi dui eget dapibus enim ornare eu. Morbi nunc metus, maximus eu mauris.",
-        author: "Kathryn Murphy",
-        position: "Web Designer"
+        title: "Отзывы клиентов",
+        heading: "Что говорят наши клиенты",
+        content: "Установили панели 5 кВт. Летом кондиционер, зимой отопление — всё теперь обходится дёшево. Команда Garant Sun Energy работала быстро и качественно. Рекомендую соседям.",
+        author: "Gulbahor Xojanova",
+        position: "Домохозяйка, г. Нукус"
     },
     {
-        id:3,
-        image: "/img/testimonial/01.jpg",
+        id: 3,
+        image: "/img/testimonial/03.jpg",
         stars: 5,
-        title: "Testimonials",
-        heading: "What’s Clients Say",
-        content: "Nullam dignissim, ante scelerisque the is euismod fermentum odio sem semper the is erat, a feugiat leo urna eget eros. Duis Aenean a imperdiet risus. Aliquam pellentesque nisi dui eget dapibus enim ornare eu. Morbi nunc metus, maximus eu mauris.",
-        author: "Kathryn Murphy",
-        position: "Web Designer"
+        title: "Отзывы клиентов",
+        heading: "Что говорят наши клиенты",
+        content: "В Муйнаке часто отключали свет. После установки солнечной системы 6 кВт эта проблема исчезла. Торговля не останавливается, холодильники работают. Считаю, что вложения окупятся за 4 года.",
+        author: "Dosbol Eshniyazov",
+        position: "Владелец магазина, Муйнак"
     },
     {
-        id:4,
-        image: "/img/testimonial/01.jpg",
+        id: 4,
+        image: "/img/testimonial/05.jpg",
         stars: 5,
-        title: "Testimonials",
-        heading: "What’s Clients Say",
-        content: "Nullam dignissim, ante scelerisque the is euismod fermentum odio sem semper the is erat, a feugiat leo urna eget eros. Duis Aenean a imperdiet risus. Aliquam pellentesque nisi dui eget dapibus enim ornare eu. Morbi nunc metus, maximus eu mauris.",
-        author: "Kathryn Murphy",
-        position: "Web Designer"
+        title: "Отзывы клиентов",
+        heading: "Что говорят наши клиенты",
+        content: "Для нашего фермерского хозяйства в Беруний установили систему 15 кВт. Монтажная бригада завершила работу раньше срока, всё подробно объяснили. Расходы на электроэнергию упали практически до нуля.",
+        author: "Alisher Matmusayev",
+        position: "Владелец фермерского хозяйства, Беруний"
     },
     {
-        id:5,
-        image: "/img/testimonial/01.jpg",
+        id: 5,
+        image: "/img/testimonial/06.jpg",
         stars: 5,
-        title: "Testimonials",
-        heading: "What’s Clients Say",
-        content: "Nullam dignissim, ante scelerisque the is euismod fermentum odio sem semper the is erat, a feugiat leo urna eget eros. Duis Aenean a imperdiet risus. Aliquam pellentesque nisi dui eget dapibus enim ornare eu. Morbi nunc metus, maximus eu mauris.",
-        author: "Kathryn Murphy",
-        position: "Web Designer"
+        title: "Отзывы клиентов",
+        heading: "Что говорят наши клиенты",
+        content: "Для нашей школы в Хужайли установили систему 20 кВт. Специалисты Garant Sun Energy контролировали проект от начала до конца. Это стало отличным примером для учеников.",
+        author: "Dilnoza Yusupova",
+        position: "Директор школы, Хужайли"
     },
-    
 ];

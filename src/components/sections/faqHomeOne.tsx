@@ -17,14 +17,14 @@ const FaqHomeOne = () => {
                     <div className="row g-4">
                         <div className="col-lg-6 wow slideUp" data-delay=".4">
                             <div className="faq-image">
-                                <img src="/img/faq/faq.png" alt="faq-img" />
+                                <img src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?w=600&q=80" alt="faq-img" />
                             </div>
                         </div>
                         <div className="col-lg-6">
                             <div className="faq-content">
                                 <SectionTitle>
-                                    <SectionTitle.SubTitle>See Our Faqs</SectionTitle.SubTitle>
-                                    <SectionTitle.Title>Frequently asked question</SectionTitle.Title>
+                                    <SectionTitle.SubTitle>Частые вопросы</SectionTitle.SubTitle>
+                                    <SectionTitle.Title>Ответы на ваши вопросы</SectionTitle.Title>
                                 </SectionTitle>
                                 <div className="faq-accordion mt-4 mt-md-0">
                                     <div className="accordion" id="accordion">

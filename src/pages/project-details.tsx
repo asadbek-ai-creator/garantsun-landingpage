@@ -41,9 +41,8 @@ const ProjectDetails = () => {
                                                     <li>
                                                         Share:
                                                         <span>
-                                                            <i className="fa-brands fa-facebook-f me-3" />
-                                                            <i className="fa-brands fa-instagram me-3" />
-                                                            <i className="fa-brands fa-linkedin-in" />
+                                                            <a href="https://www.instagram.com/garant_quyash_panelleri" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram me-3" /></a>
+                                                            <a href="https://t.me/garant_quyash_panelleri" target="_blank" rel="noopener noreferrer"><i className="fab fa-telegram-plane" /></a>
                                                         </span>
                                                     </li>
                                                 </ul>

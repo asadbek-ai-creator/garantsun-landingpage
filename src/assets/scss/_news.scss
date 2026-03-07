@@ -1,6 +1,75 @@
 @use "_variables" as *;
 @use "_mixins" as *;
 
+/* ========================================
+   Projects Section (replaces blog on home)
+   ======================================== */
+.projects-section {
+    background: $bg-color;
+}
+
+.project-card {
+    background: $white;
+    border: 1px solid #e8e8e8;
+    border-radius: 12px;
+    overflow: hidden;
+    @include transition;
+
+    &:hover {
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.10);
+        transform: translateY(-4px);
+    }
+
+    &__img-wrap {
+        img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+    }
+
+    &__body {
+        padding: 16px;
+    }
+
+    &__badge {
+        display: inline-block;
+        background: #2e7d32;
+        color: $white;
+        border-radius: 20px;
+        padding: 4px 12px;
+        font-size: 13px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    &__title {
+        font-size: 16px;
+        font-weight: 700;
+        color: $header-color;
+        margin-bottom: 8px;
+        line-height: 1.4;
+    }
+
+    &__location,
+    &__type {
+        font-size: 13px;
+        color: $text-color;
+        margin-bottom: 4px;
+
+        i {
+            color: $theme-color;
+            width: 16px;
+            text-align: center;
+            margin-right: 6px;
+        }
+    }
+}
+
+/* ========================================
+   Original News/Blog Styles
+   ======================================== */
 .news-wrapper {
     padding: 0 75px;
 

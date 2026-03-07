@@ -1,44 +1,45 @@
 import SectionTitle from "@/components/ui/sectionTitle"
-import { blogPostsOneData } from "@/db/blogPostsOneData"
-import { Link } from "react-router-dom"
+import { projectsData } from "@/db/projectsData"
 
 const BlogsOne = () => {
     return (
-        <section id="blog" className="news-section section-padding fix">
+        <section id="projects" className="projects-section section-padding fix">
             <div className="container">
                 <SectionTitle className="text-center">
-                    <SectionTitle.SubTitle>Recent Articles</SectionTitle.SubTitle>
-                    <SectionTitle.Title>Our Latest Blog</SectionTitle.Title>
+                    <SectionTitle.SubTitle>Наши проекты</SectionTitle.SubTitle>
+                    <SectionTitle.Title>Завершённые проекты</SectionTitle.Title>
                 </SectionTitle>
-            </div>
-            <div className="news-wrapper">
-                <div className="row">
-                    {blogPostsOneData.map((post) => (
-                        <div className="col-xl-4 col-lg-6 col-md-6 wow slideUp" data-delay={post.delay} key={post.id}>
-                            <div className="single-news-items">
-                                <div className="news-image bg-cover" style={{ backgroundImage: `url(${post.image})` }}>
-                                    <div className="post-date">
-                                        <span>{post.date.month} {post.date.year}</span>
+
+                <div className="row g-4 mt-2 justify-content-center">
+                    {projectsData.map((project, index) => {
+                        const delays = [".2", ".3", ".4", ".2", ".3", ".4", ".3"]
+                        return (
+                            <div
+                                className="col-xl-4 col-lg-4 col-md-6 wow slideUp"
+                                data-delay={delays[index] ?? ".3"}
+                                key={project.id}
+                            >
+                                <div className="project-card">
+                                    <div className="project-card__img-wrap">
+                                        <img src={project.image} alt={project.title} />
+                                    </div>
+                                    <div className="project-card__body">
+                                        <span className="project-card__badge">{project.power}</span>
+                                        <h4 className="project-card__title">{project.title}</h4>
+                                        <p className="project-card__location">
+                                            <i className="fas fa-map-marker-alt" /> {project.location}
+                                        </p>
+                                        <p className="project-card__type">
+                                            <i className="fas fa-solar-panel" /> {project.type}
+                                        </p>
                                     </div>
                                 </div>
-                                <div className="news-content">
-                                    <h3>
-                                        <Link to={post.link}>
-                                            {post.title}
-                                        </Link>
-                                    </h3>
-                                    <p>{post.description}</p>
-                                    <Link to={post.link} className="theme-btn-2 mt-3">
-                                        Read More
-                                    </Link>
-                                </div>
                             </div>
-                        </div>
-                    ))}
+                        )
+                    })}
                 </div>
             </div>
         </section>
-
     )
 }
 

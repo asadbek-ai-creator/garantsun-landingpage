@@ -24,23 +24,7 @@ export type MenuItemDataType = {
 
 
 export const menuData: MenuItemDataType[] = [
-  {
-    title: 'Home',
-    link: '/',
-  },
-  {
-    title: 'About',
-    link: '/about',
-  },
-  {
-    title: 'Services',
-    link: '/service',
-    submenu: [
-      { title: 'Services', link: '/service' },
-      { title: 'Service Carousel', link: '/service-carousel' },
-      { title: 'Service Details', link: '/service-details' },
-    ],
-  },
+  
   {
     title: 'Pages',
     link: '#',

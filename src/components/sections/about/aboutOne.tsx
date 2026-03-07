@@ -1,6 +1,4 @@
 import SectionTitle from "@/components/ui/sectionTitle"
-import AboutRoundedTextVideoPopup from "./aboutRoundedTextVideoPopup"
-import { Link } from "react-router-dom"
 
 const AboutOne = () => {
   return (
@@ -15,13 +13,13 @@ const AboutOne = () => {
                     <img src="/img/about/icon-1.svg" alt="icon-img" />
                   </div>
                   <div className="content">
-                    <h3><span className="count">6,561</span>+</h3>
+                    <h3><span className="count">50</span>+</h3>
+                    <p>Завершённых проектов</p>
                   </div>
                 </div>
-                <AboutRoundedTextVideoPopup/>
-                <div className="about-image-1 bg-cover wow slideLeft" data-delay=".3" style={{ backgroundImage: 'url("/img/about/01.jpg")' }}>
+<div className="about-image-1 bg-cover wow slideLeft" data-delay=".3" style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&q=80")' }}>
                   <div className="about-image-2 wow slideUp" data-delay=".5">
-                    <img src="/img/about/02.jpg" alt="about-img" />
+                    <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&q=80" alt="about-img" />
                   </div>
                 </div>
               </div>
@@ -29,11 +27,11 @@ const AboutOne = () => {
             <div className="col-lg-6 mt-4 mt-lg-0">
               <div className="about-content">
                 <SectionTitle>
-                  <SectionTitle.SubTitle>About Us</SectionTitle.SubTitle>
-                  <SectionTitle.Title> Welcome To Garant Sun Energy</SectionTitle.Title>
+                  <SectionTitle.SubTitle>О нас</SectionTitle.SubTitle>
+                  <SectionTitle.Title>Добро пожаловать в Garant Sun Energy</SectionTitle.Title>
                 </SectionTitle>
                 <p className="mt-3 mt-md-0 wow slideUp" data-delay=".5">
-                  Garant Sun Energy is a trusted partner in solar energy across Uzbekistan. We supply high-quality solar panels and inverters, provide professional installation, and offer ongoing technical support. Our mission is to make clean, reliable solar energy accessible to homes, businesses, and industries.
+                  Garant Sun Energy — надёжный партнёр в области солнечной энергетики по всему Узбекистану. Мы поставляем высококачественные солнечные панели и инверторы, осуществляем профессиональный монтаж и обеспечиваем постоянную техническую поддержку. Наша миссия — сделать чистую и надёжную солнечную энергию доступной для домов, предприятий и промышленных объектов.
                 </p>
                 <div className="about-icon-items">
                   <div className="icon-items wow slideUp" data-delay=".7">
@@ -41,9 +39,9 @@ const AboutOne = () => {
                       <img src="/img/about/icon-2.svg" alt="icon-img" />
                     </div>
                     <div className="content">
-                      <h4>Reliability and Performance</h4>
+                      <h4>Надёжность и производительность</h4>
                       <p>
-                        High-efficiency ERA Solar panels and GoodWe inverters
+                        Высокоэффективные панели ERA Solar и инверторы GoodWe
                       </p>
                     </div>
                   </div>
@@ -52,25 +50,10 @@ const AboutOne = () => {
                       <img src="/img/about/icon-3.svg" alt="icon-img" />
                     </div>
                     <div className="content">
-                      <h4>Professional Support</h4>
+                      <h4>Профессиональная поддержка</h4>
                       <p>
-                        Installation, maintenance, and monitoring across Karakalpakstan
+                        Монтаж, обслуживание и мониторинг по всему Каракалпакстану
                       </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="about-author">
-                  <div className="about-button wow slideUp" data-delay=".5">
-                    <Link to="/about" className="theme-btn">
-                      Explore More
-                      <i className="fa-solid fa-arrow-right-long" />
-                    </Link>
-                  </div>
-                  <div className="author-image wow slideUp" data-delay=".7">
-                    <img src="/img/about/author.png" alt="author-img" />
-                    <div className="content">
-                      <h6>Ronald Richards</h6>
-                      <p>Co, Founder</p>
                     </div>
                   </div>
                 </div>

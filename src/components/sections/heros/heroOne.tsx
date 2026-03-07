@@ -2,7 +2,6 @@ import { motion } from "motion/react"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Autoplay, EffectFade, Navigation } from "swiper/modules";
 import 'swiper/css';
-import { Link } from "react-router-dom";
 
 interface SlideType {
   id: number;
@@ -17,24 +16,24 @@ const slidesData: SlideType[] = [
     id: 1,
     image: '/img/hero/hero-12.jpg',
     title: 'GARANT SUN ENERGY',
-    heading: 'Garant Sun Energy — <br /> Reliable Solar Energy <br /> Solutions',
-    description: 'Premium solar panels and inverters for residential, commercial, and industrial projects',
+    heading: 'Garant Sun Energy — <br /> Надёжные решения <br /> в солнечной энергетике',
+    description: 'Премиальные солнечные панели и инверторы для жилых, коммерческих и промышленных объектов',
     link: '/',
   },
   {
     id: 2,
     image: '/img/hero/hero-7.jpg',
     title: 'GARANT SUN ENERGY',
-    heading: 'ERA Solar Panels &amp; <br /> GoodWe Inverters for <br /> Every Project',
-    description: 'Professional installation and maintenance across Uzbekistan and Karakalpakstan',
+    heading: 'Панели ERA Solar &amp; <br /> Инверторы GoodWe для <br /> любого проекта',
+    description: 'Профессиональный монтаж и обслуживание по всему Узбекистану и Каракалпакстану',
     link: '/',
   },
   {
     id: 3,
     image: '/img/hero/hero-3.jpg',
     title: 'GARANT SUN ENERGY',
-    heading: 'Powering Homes &amp; <br /> Industries with <br /> Clean Energy',
-    description: 'From project design to monitoring — full-cycle solar energy solutions',
+    heading: 'Энергия для домов &amp; <br /> предприятий от <br /> чистого источника',
+    description: 'От проектирования до мониторинга — полный цикл решений в солнечной энергетике',
     link: '/',
   },
 ];
@@ -116,20 +115,6 @@ const Card = ({ slide, isActive }: { slide: SlideType; isActive: boolean }) => {
               >
                 {slide.description}
               </motion.p>
-              <motion.div
-                initial={{ x: '100%', opacity: 0 }}
-                animate={{ x: isActive ? '0' : '100%', opacity: isActive ? 1 : 0 }}
-                transition={{
-                  duration: .5,
-                  delay: 0.9,
-                  ease: 'linear',
-                }}
-                className="hero-button"
-              >
-                <Link to={slide.link} className="theme-btn theme-color-2">
-                  <span>Learn More <i className="fas fa-chevron-right" /></span>
-                </Link>
-              </motion.div>
             </div>
           </div>
         </div>

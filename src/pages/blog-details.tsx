@@ -83,9 +83,8 @@ const BlogDetails = () => {
                                         <div className="col-lg-4 col-12 mt-3 mt-lg-0 text-lg-end">
                                             <div className="social-share">
                                                 <span className="me-3">Share:</span>
-                                                <Link to="#"><i className="fab fa-facebook-f" /></Link>
-                                                <Link to="#"><i className="fa-brands fa-x-twitter" /></Link>
-                                                <Link to="#"><i className="fab fa-linkedin-in" /></Link>
+                                                <a href="https://www.instagram.com/garant_quyash_panelleri" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram" /></a>
+                                                <a href="https://t.me/garant_quyash_panelleri" target="_blank" rel="noopener noreferrer"><i className="fab fa-telegram-plane" /></a>
                                             </div>
                                         </div>
                                     </div>

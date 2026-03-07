@@ -4,38 +4,23 @@ import { Link } from "react-router-dom";
 const contactInfo = [
     {
         icon: <SuCallMessage />,
-        label: "Call Us 7/24",
-        value: "+998-555-01-12",
-        link: "tel:+9985550112",
+        label: "Звоните 7/24",
+        value: "+99897 242 10 01",
+        link: "tel:+998972421001",
     },
     {
         icon: <SuEmail />,
-        label: "Make a Quote",
+        label: "Написать нам",
         value: "garantsunenergy@gmail.com",
         link: "#",
     },
     {
         icon: <SuLocation />,
-        label: "Location",
+        label: "Адрес",
         value: "Uzbekistan, Karakalpakstan, Nukus",
     },
 ];
 
-const quickLinks = [
-    { text: "Solar About", link: "/about" },
-    { text: "Our Services", link: "/service" },
-    { text: "Our Blogs", link: "/news" },
-    { text: "FAQ’S", link: "/faq" },
-    { text: "Contact Us", link: "/contact" },
-];
-
-const services = [
-    { text: "Consultancy", link: "/service-details" },
-    { text: "Solar System", link: "/service-details" },
-    { text: "Solar Panel", link: "/service-details" },
-    { text: "Style Guide", link: "/service-details" },
-    { text: "License", link: "/service-details" },
-];
 
 const Footer = () => {
     return (
@@ -68,9 +53,9 @@ const Footer = () => {
                     <img src="/img/footer-shape-1.png" alt="shape-img" />
                 </div>
                 <div className="container">
-                    <div className="row">
+                    <div className="row justify-content-center">
                         <div
-                            className="col-xl-3 col-lg-4 col-md-6 wow slideUp"
+                            className="col-xl-6 col-lg-8 col-md-10 text-center wow slideUp"
                             data-delay=".3"
                         >
                             <div className="single-footer-widget">
@@ -81,71 +66,19 @@ const Footer = () => {
                                 </div>
                                 <div className="footer-content">
                                     <p>
-                                        Garant Sun Energy — your trusted partner in solar energy
-                                        across Uzbekistan and Karakalpakstan.
+                                        Garant Sun Energy — ваш надёжный партнёр в солнечной энергетике
+                                        по всему Узбекистану и Каракалпакстану.
                                     </p>
-                                    <div className="social-icon d-flex align-items-center">
-                                        <Link to="#">
-                                            <i className="fab fa-facebook-f" />
-                                        </Link>
-                                        <Link to="#">
-                                            <i className="fa-brands fa-x-twitter" />
-                                        </Link>
-                                        <Link to="#">
-                                            <i className="fa-brands fa-linkedin-in" />
-                                        </Link>
-                                        <Link to="#">
-                                            <i className="fa-brands fa-youtube" />
-                                        </Link>
+                                    <div className="social-icon d-flex align-items-center justify-content-center">
+                                        <a href="https://www.instagram.com/garant_quyash_panelleri" target="_blank" rel="noopener noreferrer">
+                                            <i className="fab fa-instagram" />
+                                        </a>
+                                        <a href="https://t.me/garant_quyash_panelleri" target="_blank" rel="noopener noreferrer">
+                                            <i className="fab fa-telegram-plane" />
+                                        </a>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div
-                            className="col-xl-2 col-lg-4 col-md-6 ps-lg-5 wow slideUp"
-                            data-delay=".5"
-                        >
-                            <div className="single-footer-widget">
-                                <div className="widget-head">
-                                    <h3>Quick Links</h3>
-                                </div>
-                                <ul className="list-area">
-                                    {quickLinks.map((link, index) => (
-                                        <li key={index}>
-                                            <Link to={link.link}>
-                                                <i className="fa-solid fa-chevron-right" />
-                                                {link.text}
-                                            </Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        </div>
-                        <div
-                            className="col-xl-3 col-lg-4 col-md-6 ps-lg-5 wow slideUp"
-                            data-delay=".5"
-                        >
-                            <div className="single-footer-widget style-margin">
-                                <div className="widget-head">
-                                    <h3>Services</h3>
-                                </div>
-                                <ul className="list-area">
-                                    {services.map((service, index) => (
-                                        <li key={index}>
-                                            <Link to={service.link}>
-                                                <i className="fa-solid fa-chevron-right" />
-                                                {service.text}
-                                            </Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        </div>
-                        <div
-                            className="col-xl-4 col-lg-4 col-md-6 wow slideUp"
-                            data-delay=".7"
-                        >
-                            
                         </div>
                     </div>
                 </div>
@@ -154,14 +87,14 @@ const Footer = () => {
                 <div className="container">
                     <div className="footer-wrapper d-flex align-items-center justify-content-between">
                         <p className="wow slideLeft color-2" data-delay=".3">
-                            © All Copyright 2026 by <Link to="/">Garant Sun Energy</Link> {" "}
+                            © Все права защищены 2026 — <Link to="/">Garant Sun Energy</Link> {" "}
                         </p>
                         <ul className="footer-menu wow slideRight" data-delay=".5">
                             <li>
-                                <Link to="contact">Terms &amp; Condition</Link>
+                                <Link to="contact">Условия использования</Link>
                             </li>
                             <li>
-                                <Link to="contact">Privacy Policy</Link>
+                                <Link to="contact">Политика конфиденциальности</Link>
                             </li>
                         </ul>
                     </div>

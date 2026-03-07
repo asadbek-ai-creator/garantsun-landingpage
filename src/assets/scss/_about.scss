@@ -5,37 +5,6 @@
     .about-image-items {
         position: relative;
 
-        .video-box {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            z-index: 9;
-
-            .video-buttton {
-                width: 142px;
-                height: 142px;
-                line-height: 142px;
-                text-align: center;
-                border-radius: 50%;
-                background-color: $theme-color;
-                display: inline-block;
-                z-index: 9;
-                font-size: 24px;
-                color: $white;
-                position: relative;
-
-                .text-circle {
-                    position: absolute;
-                    top: 7%;
-                    left: 7%;
-                    -webkit-animation: cir36 10s linear infinite;
-                    animation: cir36 10s linear infinite;
-                }
-
-            }
-        }
-
         .counter-shape {
             @include flex;
             gap: 16px;
@@ -162,29 +131,6 @@
             }
         }
 
-        .about-author {
-            @include flex;
-            gap: 30px;
-            margin-top: 50px;
-
-            @include breakpoint (max-xl){
-                flex-wrap: wrap;
-            }
-
-            .author-image {
-                @include flex;
-                gap: 15px;
-
-                .content {
-                    p {
-                        font-size: 14px;
-                        color: $text-color;
-                        font-weight: 500;
-                        margin-top: -2px;
-                    }
-                }
-            }
-        }
     }
 
     &.style-2 {
@@ -297,60 +243,6 @@
         position: relative;
         z-index: 9;
 
-        .video-box {
-            position: absolute;
-            top: 40%;
-            right: 40%;
-            width: 125px;
-            height: 125px;
-            line-height: 125px;
-            background-color: $white;
-            border-radius: 50%;
-            text-align: center;
-
-            @include breakpoint (max-md){
-                width: 105px;
-                height: 105px;
-                line-height: 105px;
-            }
-
-            @include breakpoint (max-sm){
-                width: 95px;
-                height: 95px;
-                line-height: 95px;
-            }
-
-            .video-btn {
-                width: 85px;
-                height: 85px;
-                line-height: 85px;
-                font-size: 22px;
-                background-color: $theme-color;
-                color: $white;
-                display: inline-block;
-                text-align: center;
-                border-radius: 50%;
-
-                @include breakpoint (max-md){
-                    width: 70px;
-                    height: 70px;
-                    line-height: 70px;
-                }
-
-                @include breakpoint (max-sm){
-                    width: 60px;
-                    height: 60px;
-                    line-height: 60px;
-                }
-            }
-
-            .ripple {
-                &::before,&::after {
-                    box-shadow: 0 0 0 0 rgba(119, 184, 15, .5);
-                }
-            }
-        }
-
         .shape-image {
             position: absolute;
             bottom: 10%;
@@ -432,67 +324,6 @@
             }
         }
 
-        .about-author {
-            @include flex;
-            gap: 30px;
-            margin-top: 50px;
-
-            @include breakpoint (max-xl){
-                flex-wrap: wrap;
-            }
-
-            @include breakpoint (max-md){
-               margin-top: 30px;
-            }
-
-            @include breakpoint (max-sm){
-                margin-top: 20px;
-            }
-
-            .author-icon {
-                @include flex;
-                gap: 20px;
-
-                .icon {
-                    width: 48px;
-                    height: 48px;
-                    line-height: 48px;
-                    text-align: center;
-                    background-color: $theme-color;
-                    text-align: center;
-                    color: $white;
-                    border-radius: 50%;
-                    position: relative;
-
-                    &::before {
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        right: 0;
-                        bottom: 0;
-                        width: 60px;
-                        height: 60px;
-                        border-radius: 50%;
-                        border: 1px solid $theme-color;
-                        content: "";
-                        transform: translate(-50%,-50%);
-                    }
-                    
-                }
-
-                .content {
-                    h5 {
-                        font-weight: 600;
-                    }
-
-                    span {
-                        font-size: 14px;
-                        font-weight: 600;
-                        color: $header-color;
-                    }
-                }
-            }
-        }
     }
 
     &.style-2 {
@@ -509,17 +340,6 @@
                 margin-left: 0;
             }
 
-            .about-button {
-                margin-top: 50px;
-
-                @include breakpoint (max-md){
-                    margin-top: 35px;
-                }
-
-                @include breakpoint (max-sm){
-                    margin-top: 25px;
-                }
-            }
         }
     }
 }

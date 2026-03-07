@@ -10,9 +10,6 @@ import Home from "@/pages/home";
 import Project from "@/pages/project";
 import ProjectCarousel from "@/pages/project-carousel";
 import ProjectDetails from "@/pages/project-details";
-import Service from "@/pages/service";
-import ServiceCarousel from "@/pages/service-carousel";
-import ServiceDetails from "@/pages/service-details";
 import Team from "@/pages/team";
 import TeamCarousel from "@/pages/team-carousel";
 import TeamDetails from "@/pages/team-details";
@@ -30,18 +27,6 @@ export const router = createBrowserRouter([
             {
                 path: "/about",
                 element: <About />
-            },
-            {
-                path: "/service",
-                element: <Service />
-            },
-            {
-                path: "/service-carousel",
-                element: <ServiceCarousel />
-            },
-            {
-                path: "/service-details",
-                element: <ServiceDetails />
             },
             {
                 path: "/project",

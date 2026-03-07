@@ -55,10 +55,8 @@ const TeamDetails = () => {
                                     </div>
                                     <div className="social-icon">
                                         <span>Social Media:</span>
-                                        <Link to="#"><i className="fa-brands fa-facebook-f" /></Link>
-                                        <Link to="#" className="active"><i className="fa-brands fa-twitter" /></Link>
-                                        <Link to="#"><i className="fa-brands fa-linkedin-in" /></Link>
-                                        <Link to="#"><i className="fa-brands fa-youtube" /></Link>
+                                        <a href="https://www.instagram.com/garant_quyash_panelleri" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram" /></a>
+                                        <a href="https://t.me/garant_quyash_panelleri" target="_blank" rel="noopener noreferrer"><i className="fab fa-telegram-plane" /></a>
                                     </div>
                                 </div>
                             </div>
