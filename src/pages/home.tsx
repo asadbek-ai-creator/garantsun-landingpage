@@ -8,7 +8,6 @@ import LeadForm from '@/components/sections/contact/leadForm'
 import FaqHomeOne from '@/components/sections/faqHomeOne'
 import HeroOne from '@/components/sections/heros/heroOne'
 import MarqueOne from '@/components/sections/marques/marqueOne'
-import MarqueTwo from '@/components/sections/marques/marqueTwo'
 import NewsLetter from '@/components/sections/newsLetter'
 import PartnersOne from '@/components/sections/partners/partnersOne'
 import Products from '@/components/sections/products'
@@ -30,7 +29,7 @@ const Home = () => {
             <Products/>
             <CreditCalculator onResultsChange={setCreditResults} />
             <LeadForm creditResults={creditResults} />
-            <MarqueTwo/>
+            <MarqueOne/>
             <TestimonialOne/>
             <TeamesOne/>
             <FaqHomeOne/>

@@ -1,5 +1,5 @@
-import { teamMembersThreeData } from "@/db/teamMembersThreeData"
-import TeamCardTwo from "./teamCardTwo"
+import { teamMembersOneData } from "@/db/teamMembersOneData"
+import TeamCard from "./teamCard"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Autoplay, Pagination } from "swiper/modules"
 import 'swiper/css'
@@ -41,11 +41,11 @@ const TeamCarouselOne = () => {
           }}
           modules={[Pagination, Autoplay]}
         >
-          {teamMembersThreeData.map((member) => (
+          {teamMembersOneData.map((member) => (
             <SwiperSlide
               key={member.id}
             >
-              <TeamCardTwo member={member} />
+              <TeamCard member={member} />
             </SwiperSlide>
           ))}
           <div className="swiper-dot-2">

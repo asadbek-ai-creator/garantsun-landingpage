@@ -1,11 +1,11 @@
 import PageTitle from "@/components/sections/pageTitle"
-import TeamesTwo from "@/components/sections/teames/teamesTwo"
+import TeamesOne from "@/components/sections/teames/teamesOne"
 
 const Team = () => {
   return (
     <>
         <PageTitle title="Our Team" currentPage="Our Team"/>
-        <TeamesTwo isTitleShow={false}/>
+        <TeamesOne/>
     </>
   )
 }

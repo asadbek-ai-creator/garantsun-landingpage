@@ -1,20 +1,18 @@
-import AboutTwo from "@/components/sections/about/aboutTwo"
-import MarqueTwo from "@/components/sections/marques/marqueTwo"
+import AboutOne from "@/components/sections/about/aboutOne"
 import PartnersOne from "@/components/sections/partners/partnersOne"
-import ProjectsTwo from "@/components/sections/projects/projectsTwo"
+import ProjectsOne from "@/components/sections/projects/projectsOne"
 import Offer from "@/components/sections/offer"
 import PageTitle from "@/components/sections/pageTitle"
-import TeamesThree from "@/components/sections/teames/teamesThree"
+import TeamesOne from "@/components/sections/teames/teamesOne"
 
 const About = () => {
   return (
     <>
       <PageTitle title="About Us" currentPage="About Us"/>
-      <AboutTwo/>
+      <AboutOne/>
       <Offer/>
-      <ProjectsTwo/>
-      <MarqueTwo className="section-padding"/>
-      <TeamesThree/>
+      <ProjectsOne/>
+      <TeamesOne/>
       <PartnersOne/>
     </>
   )

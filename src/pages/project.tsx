@@ -1,5 +1,5 @@
 import PageTitle from "@/components/sections/pageTitle"
-import { projectsFourData } from "@/db/projectsFourData"
+import { projectsOneData } from "@/db/projectsOneData"
 import { Link } from "react-router-dom"
 
 const Project = () => {
@@ -9,7 +9,7 @@ const Project = () => {
             <section className="project-section section-padding fix">
                 <div className="container">
                     <div className="row g-4">
-                        {projectsFourData.map((project) => (
+                        {projectsOneData.map((project) => (
                             <div key={project.id} className="col-xl-4 col-lg-6 col-md-6 wow slideUp" data-delay=".3">
                                 <div className="project-items style-2">
                                     <div className="project-image">
