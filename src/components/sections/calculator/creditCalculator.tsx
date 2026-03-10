@@ -22,7 +22,7 @@ const CreditCalculator = () => {
     const totalCost = kw * PRICE_PER_KW
     const paybackMonths = monthlySavings > 0 ? totalCost / monthlySavings : 0
     const paybackYears = paybackMonths / 12
-    const savings1year = monthlySavings * 12
+    const savings1year = monthlySavings * 12 * 1 - totalCost
     const savings5year = monthlySavings * 12 * 5 - totalCost
     const savings10year = monthlySavings * 12 * 10 - totalCost
     const savings25year = monthlySavings * 12 * 25 - totalCost
@@ -121,8 +121,8 @@ const CreditCalculator = () => {
                       <span className="credit-calc-details__label">
                         <i className="fas fa-chart-line" /> Прибыль за 1 год
                       </span>
-                      <span className="credit-calc-details__value credit-calc-details__value--accent">
-                        +{formatUZS(results.savings1year)} UZS
+                      <span className={`credit-calc-details__value ${results.savings1year >= 0 ? "credit-calc-details__value--accent" : "credit-calc-details__value--warn"}`}>
+                        {results.savings1year >= 0 ? "+" : ""}{formatUZS(results.savings1year)} UZS
                       </span>
                     </div>
                     <div className="credit-calc-details__row">
@@ -145,8 +145,8 @@ const CreditCalculator = () => {
                       <span className="credit-calc-details__label">
                         <i className="fas fa-star" /> Прибыль за 25 лет
                       </span>
-                      <span className="credit-calc-details__value credit-calc-details__value--total">
-                        +{formatUZS(results.savings25year)} UZS
+                      <span className={`credit-calc-details__value ${results.savings25year >= 0 ? "credit-calc-details__value--total" : "credit-calc-details__value--warn"}`}>
+                        {results.savings25year >= 0 ? "+" : ""}{formatUZS(results.savings25year)} UZS
                       </span>
                     </div>
                     <div className="credit-calc-details__row">
