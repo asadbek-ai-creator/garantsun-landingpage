@@ -330,6 +330,173 @@
   }
 }
 
+/* ---------- Example scenario box ---------- */
+.credit-calc-example {
+  margin-top: 20px;
+  background: rgba(29, 143, 44, 0.07);
+  border: 1px solid rgba(29, 143, 44, 0.22);
+  border-radius: 12px;
+  padding: 16px 20px;
+
+  &__title {
+    font-size: 14px;
+    font-weight: 700;
+    color: $theme-color;
+    margin-bottom: 12px;
+  }
+
+  &__rows {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: $text-color;
+
+    span:last-child {
+      font-weight: 600;
+      color: $header-color;
+    }
+
+    &--highlight {
+      border-top: 1px solid rgba(29, 143, 44, 0.2);
+      padding-top: 6px;
+      margin-top: 2px;
+
+      span:last-child {
+        color: $theme-color;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+/* ---------- Cashflow tiles ---------- */
+.credit-calc-cashflow-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.credit-calc-cashflow {
+  flex: 1;
+  border-radius: 12px;
+  padding: 16px 18px;
+  text-align: center;
+
+  &__label {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+    opacity: 0.75;
+  }
+
+  &__value {
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.2;
+
+    @include breakpoint(max-sm) {
+      font-size: 15px;
+    }
+  }
+
+  &--positive {
+    background: rgba(29, 143, 44, 0.10);
+    border: 1px solid rgba(29, 143, 44, 0.25);
+
+    .credit-calc-cashflow__label  { color: $theme-color; }
+    .credit-calc-cashflow__value  { color: $theme-color; }
+  }
+
+  &--negative {
+    background: rgba(231, 76, 60, 0.08);
+    border: 1px solid rgba(231, 76, 60, 0.25);
+
+    .credit-calc-cashflow__label  { color: #c0392b; }
+    .credit-calc-cashflow__value  { color: #c0392b; }
+  }
+
+  &--neutral {
+    background: $bg-color;
+    border: 1px solid $border-color;
+
+    .credit-calc-cashflow__label  { color: $text-color; }
+    .credit-calc-cashflow__value  { color: $header-color; }
+  }
+}
+
+/* ---------- Monthly generation chart ---------- */
+.credit-calc-chart {
+  margin-top: 16px;
+  background: $bg-color;
+  border-radius: 14px;
+  padding: 20px 20px 12px;
+
+  &__title {
+    font-size: 13px;
+    font-weight: 600;
+    color: $text-color;
+    margin-bottom: 14px;
+
+    i {
+      color: $theme-color;
+      margin-right: 6px;
+    }
+  }
+
+  &__bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 4px;
+    height: 90px;
+  }
+
+  &__bar-wrap {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    position: relative;
+  }
+
+  &__bar-value {
+    font-size: 9px;
+    color: $text-color;
+    margin-bottom: 3px;
+    line-height: 1;
+    white-space: nowrap;
+
+    @include breakpoint(max-sm) {
+      display: none;
+    }
+  }
+
+  &__bar {
+    width: 100%;
+    background: linear-gradient(180deg, #1D8F2C 0%, #4caf50 100%);
+    border-radius: 3px 3px 0 0;
+    min-height: 4px;
+    @include transition;
+  }
+
+  &__bar-label {
+    font-size: 9px;
+    color: $text-color;
+    margin-top: 4px;
+    text-align: center;
+    white-space: nowrap;
+  }
+}
+
 /* 0% badge banner */
 .credit-calc-badge-banner {
   margin-top: 16px;

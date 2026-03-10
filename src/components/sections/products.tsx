@@ -5,7 +5,6 @@ const productsData = [
     id: 1,
     title: "ERA Solar Eagle Pro-66HD",
     subtitle: "Двусторонняя двустекольная солнечная панель N-типа",
-    image: "/img/project/01.jpg",
     specs: [
       { label: "Диапазон мощности", value: "695–720 Вт" },
       { label: "Макс. КПД", value: "23.18%" },
@@ -25,7 +24,6 @@ const productsData = [
     id: 2,
     title: "GoodWe GT Series Inverter",
     subtitle: "Сетевой инвертор для коммерческих и промышленных объектов",
-    image: "/img/project/02.jpg",
     specs: [
       { label: "Мощность", value: "100–125 кВт, трёхфазный" },
       { label: "Модели", value: "GW100K-GT, GW110K-GT, GW125K-GT" },
@@ -66,11 +64,6 @@ const Products = () => {
                 }}
               >
                 <div style={{ marginBottom: "20px", borderRadius: "8px", overflow: "hidden" }}>
-                  <img
-                    src={product.image}
-                    alt={product.title}
-                    style={{ width: "100%", height: "220px", objectFit: "cover" }}
-                  />
                 </div>
                 <h3 style={{ marginBottom: "5px", color: "#1a1a2e" }}>{product.title}</h3>
                 <p style={{ marginBottom: "15px", color: "#f6a000", fontWeight: 600 }}>

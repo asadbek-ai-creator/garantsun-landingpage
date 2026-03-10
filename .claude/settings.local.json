@@ -10,7 +10,8 @@
       "Bash(npx vite build:*)",
       "Bash(rm:*)",
       "Bash(npm run:*)",
-      "Bash(npx prisma:*)"
+      "Bash(npx prisma:*)",
+      "Bash(git add src/components/sections/calculator/creditCalculator.tsx && git commit -m \"$\\(cat <<'EOF'\nFix profit calculations to subtract installation cost\n\n- savings1year now correctly uses \\(monthlySavings * 12\\) - totalCost\n- All 4 profit rows show green/+ when >= 0, red when < 0\n\nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>\nEOF\n\\)\" && git push)"
     ]
   }
 }
