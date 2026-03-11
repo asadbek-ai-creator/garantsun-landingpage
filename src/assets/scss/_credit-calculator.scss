@@ -53,17 +53,6 @@
     }
   }
 
-  &__badge {
-    display: inline-flex;
-    align-items: center;
-    background: rgba(29, 143, 44, 0.1);
-    color: $theme-color;
-    font-size: 12px;
-    font-weight: 700;
-    padding: 2px 8px;
-    border-radius: 20px;
-  }
-
   &__input-wrap {
     position: relative;
   }
@@ -108,11 +97,12 @@
     margin-top: 6px;
   }
 
-  &__error {
-    display: block;
-    color: #e74c3c;
+  &__subsidy-note {
     font-size: 13px;
-    margin-top: 6px;
+    color: $theme-color;
+    font-weight: 600;
+    font-style: italic;
+    padding: 8px 0;
   }
 
   /* Slider */
@@ -177,6 +167,7 @@
     color: $header-color;
     cursor: pointer;
     text-align: center;
+    position: relative;
     @include transition;
 
     &:hover {
@@ -189,8 +180,35 @@
       border-color: $theme-color;
       color: $white;
       box-shadow: 0 4px 12px rgba(29, 143, 44, 0.3);
+
+      .calc-tooltip-icon {
+        background: rgba(255, 255, 255, 0.3);
+        color: $white;
+      }
+    }
+
+    &--tooltip {
+      padding-right: 28px;
     }
   }
+}
+
+/* ---------- Tooltip icon (?) ---------- */
+.calc-tooltip-icon {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.08);
+  color: $text-color;
+  font-size: 10px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
 }
 
 /* ---------- Results ---------- */
@@ -200,296 +218,194 @@
   flex-direction: column;
 }
 
-/* Hero stat - monthly payment */
-.credit-calc-hero-stat {
-  background: linear-gradient(135deg, #1D8F2C 0%, #16a34a 100%);
-  border-radius: 16px;
-  padding: 32px 28px;
-  text-align: center;
+/* ========================================
+   CARD 1 — Coverage Card
+   ======================================== */
+.calc-coverage-card {
+  border-radius: 14px;
+  padding: 20px 24px;
   margin-bottom: 16px;
-  position: relative;
-  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: -50%;
-    right: -30%;
-    width: 200px;
-    height: 200px;
-    background: rgba(255, 255, 255, 0.06);
-    border-radius: 50%;
+  &__icon {
+    font-size: 24px;
+    flex-shrink: 0;
+    line-height: 1;
   }
 
-  &__label {
-    font-size: 14px;
-    font-weight: 600;
-    color: rgba(255, 255, 255, 0.85);
-    margin-bottom: 8px;
-
-    i {
-      margin-right: 6px;
-    }
-  }
-
-  &__value {
-    font-size: 38px;
-    font-weight: 800;
-    color: $white;
-    line-height: 1.2;
-    letter-spacing: -0.02em;
-
-    span {
-      font-size: 18px;
-      font-weight: 600;
-      opacity: 0.8;
-    }
-
-    @include breakpoint(max-sm) {
-      font-size: 28px;
-
-      span {
-        font-size: 14px;
-      }
-    }
+  &__title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 4px;
   }
 
   &__sub {
     font-size: 13px;
-    color: rgba(255, 255, 255, 0.7);
-    margin-top: 6px;
+    font-weight: 500;
+    opacity: 0.85;
+  }
+
+  &--green {
+    background: rgba(46, 125, 50, 0.10);
+    border: 1px solid rgba(46, 125, 50, 0.3);
+
+    .calc-coverage-card__title { color: #2e7d32; }
+    .calc-coverage-card__sub   { color: #388e3c; }
+  }
+
+  &--orange {
+    background: rgba(230, 126, 34, 0.10);
+    border: 1px solid rgba(230, 126, 34, 0.3);
+
+    .calc-coverage-card__title { color: #e67e22; }
+    .calc-coverage-card__sub   { color: #d35400; }
   }
 }
 
-/* Detail rows */
-.credit-calc-details {
+/* ========================================
+   CARD 2 — Credit Compare
+   ======================================== */
+.calc-credit-compare {
   background: $bg-color;
   border-radius: 14px;
-  padding: 8px 24px;
+  padding: 20px 24px;
+  margin-bottom: 16px;
 
-  @include breakpoint(max-sm) {
-    padding: 6px 16px;
+  &__title {
+    font-size: 15px;
+    font-weight: 700;
+    color: $header-color;
+    margin-bottom: 14px;
   }
 
   &__row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 14px 0;
-    flex-wrap: wrap;
-    gap: 6px;
-
-    &:not(:last-child) {
-      border-bottom: 1px solid $border-color;
-    }
-
-    &--total {
-      padding-top: 16px;
-      margin-top: 4px;
-      border-top: 2px solid $border-color;
-    }
-  }
-
-  &__label {
+    padding: 8px 0;
     font-size: 14px;
-    font-weight: 500;
-    color: $text-color;
-
-    i {
-      color: $theme-color;
-      margin-right: 8px;
-      width: 16px;
-      text-align: center;
-    }
-  }
-
-  &__value {
-    font-size: 15px;
-    font-weight: 600;
-    color: $header-color;
-    text-align: right;
-
-    &--accent {
-      color: $theme-color;
-      font-weight: 700;
-    }
-
-    &--green {
-      color: $theme-color;
-    }
-
-    &--warn {
-      color: #e67e22;
-    }
-
-    &--total {
-      font-size: 17px;
-      font-weight: 800;
-      color: $theme-color;
-    }
-  }
-}
-
-/* ---------- Example scenario box ---------- */
-.credit-calc-example {
-  margin-top: 20px;
-  background: rgba(29, 143, 44, 0.07);
-  border: 1px solid rgba(29, 143, 44, 0.22);
-  border-radius: 12px;
-  padding: 16px 20px;
-
-  &__title {
-    font-size: 14px;
-    font-weight: 700;
-    color: $theme-color;
-    margin-bottom: 12px;
-  }
-
-  &__rows {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-  }
-
-  &__row {
-    display: flex;
-    justify-content: space-between;
-    font-size: 13px;
     color: $text-color;
 
     span:last-child {
       font-weight: 600;
       color: $header-color;
     }
-
-    &--highlight {
-      border-top: 1px solid rgba(29, 143, 44, 0.2);
-      padding-top: 6px;
-      margin-top: 2px;
-
-      span:last-child {
-        color: $theme-color;
-        font-weight: 700;
-      }
-    }
-  }
-}
-
-/* ---------- Cashflow tiles ---------- */
-.credit-calc-cashflow-row {
-  display: flex;
-  gap: 12px;
-  margin-bottom: 16px;
-}
-
-.credit-calc-cashflow {
-  flex: 1;
-  border-radius: 12px;
-  padding: 16px 18px;
-  text-align: center;
-
-  &__label {
-    font-size: 12px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 6px;
-    opacity: 0.75;
   }
 
-  &__value {
-    font-size: 18px;
-    font-weight: 800;
-    line-height: 1.2;
-
-    @include breakpoint(max-sm) {
-      font-size: 15px;
-    }
+  &__divider {
+    height: 1px;
+    background: $border-color;
+    margin: 8px 0;
   }
 
-  &--positive {
-    background: rgba(29, 143, 44, 0.10);
-    border: 1px solid rgba(29, 143, 44, 0.25);
-
-    .credit-calc-cashflow__label  { color: $theme-color; }
-    .credit-calc-cashflow__value  { color: $theme-color; }
-  }
-
-  &--negative {
-    background: rgba(231, 76, 60, 0.08);
-    border: 1px solid rgba(231, 76, 60, 0.25);
-
-    .credit-calc-cashflow__label  { color: #c0392b; }
-    .credit-calc-cashflow__value  { color: #c0392b; }
-  }
-
-  &--neutral {
-    background: $bg-color;
+  &--simple {
+    background: transparent;
     border: 1px solid $border-color;
-
-    .credit-calc-cashflow__label  { color: $text-color; }
-    .credit-calc-cashflow__value  { color: $header-color; }
   }
 }
 
-/* ---------- Monthly generation chart ---------- */
-.credit-calc-chart {
-  margin-top: 16px;
+/* Diff positive (green) */
+.calc-diff-positive {
+  background: rgba(46, 125, 50, 0.08);
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin-top: 4px;
+
+  &__main {
+    font-size: 15px;
+    font-weight: 700;
+    color: #2e7d32;
+  }
+}
+
+/* Diff negative (orange) */
+.calc-diff-negative {
+  background: rgba(230, 126, 34, 0.08);
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin-top: 4px;
+
+  &__main {
+    font-size: 15px;
+    font-weight: 700;
+    color: #e67e22;
+  }
+
+  &__sub {
+    font-size: 13px;
+    color: #d35400;
+    margin-top: 4px;
+  }
+}
+
+/* ========================================
+   SEASONALITY CHART
+   ======================================== */
+.calc-chart-container {
   background: $bg-color;
   border-radius: 14px;
   padding: 20px 20px 12px;
+  margin-bottom: 16px;
+  position: relative;
 
   &__title {
-    font-size: 13px;
-    font-weight: 600;
-    color: $text-color;
+    font-size: 14px;
+    font-weight: 700;
+    color: $header-color;
     margin-bottom: 14px;
-
-    i {
-      color: $theme-color;
-      margin-right: 6px;
-    }
   }
 
-  &__bars {
+  &__ylabel {
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: rotate(-90deg) translateX(-50%);
+    font-size: 11px;
+    color: $text-color;
+    font-weight: 500;
+  }
+
+  &__chart {
     display: flex;
     align-items: flex-end;
     gap: 4px;
-    height: 90px;
-  }
-
-  &__bar-wrap {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    height: 100%;
+    height: 200px;
     position: relative;
+    padding-left: 10px;
   }
+}
 
-  &__bar-value {
-    font-size: 9px;
+.calc-chart-bar-wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.calc-chart-bar {
+  width: 100%;
+  border-radius: 3px 3px 0 0;
+  min-height: 4px;
+  @include transition;
+
+  &__value {
+    font-size: 10px;
     color: $text-color;
     margin-bottom: 3px;
     line-height: 1;
     white-space: nowrap;
 
     @include breakpoint(max-sm) {
-      display: none;
+      font-size: 8px;
     }
   }
 
-  &__bar {
-    width: 100%;
-    background: linear-gradient(180deg, #1D8F2C 0%, #4caf50 100%);
-    border-radius: 3px 3px 0 0;
-    min-height: 4px;
-    @include transition;
-  }
-
-  &__bar-label {
-    font-size: 9px;
+  &__label {
+    font-size: 10px;
     color: $text-color;
     margin-top: 4px;
     text-align: center;
@@ -497,19 +413,115 @@
   }
 }
 
-/* 0% badge banner */
-.credit-calc-badge-banner {
-  margin-top: 16px;
-  background: rgba(29, 143, 44, 0.08);
-  border: 1px solid rgba(29, 143, 44, 0.2);
-  border-radius: 10px;
-  padding: 14px 20px;
-  text-align: center;
-  font-size: 15px;
-  font-weight: 600;
-  color: $theme-color;
+/* Consumption dashed line */
+.calc-consumption-line {
+  position: absolute;
+  left: 10px;
+  right: 0;
+  border-top: 2px dashed #e67e22;
+  z-index: 2;
+  pointer-events: none;
 
-  i {
-    margin-right: 8px;
+  &__label {
+    position: absolute;
+    right: 0;
+    top: -18px;
+    font-size: 10px;
+    font-weight: 700;
+    color: #e67e22;
+    background: $bg-color;
+    padding: 1px 4px;
+    border-radius: 4px;
+  }
+}
+
+/* ========================================
+   REAL CASE CARD
+   ======================================== */
+.calc-real-case-card {
+  background: $white;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+
+  &__img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+  }
+
+  &__content {
+    padding: 24px;
+  }
+
+  &__badge {
+    font-size: 16px;
+    font-weight: 800;
+    color: $header-color;
+    margin-bottom: 6px;
+  }
+
+  &__sub {
+    font-size: 14px;
+    color: $text-color;
+    margin-bottom: 16px;
+  }
+
+  &__stats {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  &__stat {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: $text-color;
+
+    span:first-child {
+      font-weight: 500;
+    }
+
+    span:last-child {
+      font-weight: 700;
+      color: $header-color;
+    }
+
+    &--old {
+      text-decoration: line-through;
+      color: #e74c3c !important;
+    }
+
+    &--new {
+      color: #2e7d32 !important;
+    }
+
+    &--profit {
+      color: #2e7d32 !important;
+    }
+  }
+}
+
+/* CTA Button */
+.calc-cta-button {
+  display: block;
+  width: 100%;
+  background: #2e7d32;
+  color: $white;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  @include transition;
+
+  &:hover {
+    background: #256427;
+    box-shadow: 0 4px 16px rgba(46, 125, 50, 0.4);
   }
 }
