@@ -27,3 +27,9 @@ dist-ssr
 .env
 
 DATABASE_URL="postgresql://neondb_owner:npg_Tk7CiJmc1BIQ@ep-winter-wave-aiohs1uo-pooler.c-4.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require"
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example
