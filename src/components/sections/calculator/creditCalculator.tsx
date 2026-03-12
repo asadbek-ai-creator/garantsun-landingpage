@@ -21,8 +21,52 @@ const LOAN_TERMS = [12, 24, 36, 60]
 const MONTHLY_SUN_HOURS = [3.5, 4.5, 5.5, 7.0, 8.5, 9.5, 9.5, 8.5, 7.0, 5.5, 4.0, 3.0]
 const MONTH_LABELS = ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек']
 
-const T_BUY = 1000    // сум/кВт·ч — тариф покупки у государства
 const T_SELL = 1000  // сум/кВт·ч — тариф продажи излишков государству
+
+// Uzbekistan 2025 differentiated electricity tariff
+// Converts monthly bill (sum) to kWh consumption
+function convertSumToKwh(s: number): number {
+  let k: number
+  if (s <= 120000) {
+    k = s / 600
+  } else if (s <= 360000) {
+    k = 200 + ((s - 120000) / 800)
+  } else if (s <= 860000) {
+    k = 500 + ((s - 360000) / 1000)
+  } else if (s <= 6860000) {
+    k = 1000 + ((s - 860000) / 1500)
+  } else if (s <= 15610000) {
+    k = 5000 + ((s - 6860000) / 1750)
+  } else {
+    k = 10000 + ((s - 15610000) / 2000)
+  }
+  return Math.round(k)
+}
+
+// Converts kWh consumption back to sum using tiered tariff
+function convertKwhToSum(kwh: number): number {
+  let s: number
+  if (kwh <= 200) {
+    s = kwh * 600
+  } else if (kwh <= 500) {
+    s = 120000 + ((kwh - 200) * 800)
+  } else if (kwh <= 1000) {
+    s = 360000 + ((kwh - 500) * 1000)
+  } else if (kwh <= 5000) {
+    s = 860000 + ((kwh - 1000) * 1500)
+  } else if (kwh <= 10000) {
+    s = 6860000 + ((kwh - 5000) * 1750)
+  } else {
+    s = 15610000 + ((kwh - 10000) * 2000)
+  }
+  return Math.round(s)
+}
+
+// Average tariff for display purposes
+function getAvgTariff(s: number, kwh: number): number {
+  if (kwh === 0) return 600
+  return Math.round(s / kwh)
+}
 
 function formatUZS(value: number): string {
   return Math.round(value).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')
@@ -60,8 +104,9 @@ const CreditCalculator = () => {
       ? loanAmount * (monthlyRate * Math.pow(1 + monthlyRate, months)) / (Math.pow(1 + monthlyRate, months) - 1)
       : 0
 
-    // Client monthly consumption in kWh
-    const clientKwh = monthlyBill / T_BUY
+    // Client monthly consumption in kWh (tiered tariff)
+    const clientKwh = convertSumToKwh(monthlyBill)
+    const avgTariff = getAvgTariff(monthlyBill, clientKwh)
 
     // Monthly generation per month
     const monthlyGeneration = MONTHLY_SUN_HOURS.map(h => system.kw * h * 30)
@@ -73,11 +118,11 @@ const CreditCalculator = () => {
     for (let i = 0; i < 12; i++) {
       const panelKwh = monthlyGeneration[i]
       if (panelKwh <= clientKwh) {
-        // Scenario A: panel produces less than client uses — savings only
-        totalAnnualValue += panelKwh * T_BUY
+        // Scenario A: partial coverage — tiered tariff savings
+        totalAnnualValue += convertKwhToSum(panelKwh)
       } else {
-        // Scenario B: panel produces more — full savings + surplus income
-        const savings = clientKwh * T_BUY
+        // Scenario B: full coverage + surplus
+        const savings = monthlyBill  // full bill saved
         const surplusKwh = panelKwh - clientKwh
         const surplusIncome = surplusKwh * T_SELL
         totalAnnualValue += savings + surplusIncome
@@ -105,7 +150,7 @@ const CreditCalculator = () => {
 
     return {
       basePrice, avansAmount, loanAmount,
-      monthlyPayment, clientKwh,
+      monthlyPayment, clientKwh, avgTariff,
       coveragePercent, julyPanel,
       avgSurplusKwh, avgMonthlyValue,
       diff, monthlyGeneration, paybackYears,
@@ -154,7 +199,7 @@ const CreditCalculator = () => {
                   <span className="credit-calc-field__suffix">сўм</span>
                 </div>
                 <small className="credit-calc-field__hint">
-                  Ваше потребление: ~{formatUZS(results.clientKwh)} кВт·ч/мес
+                  Ваше потребление: ~{formatUZS(results.clientKwh)} кВт·ч/мес (средний тариф: {formatUZS(results.avgTariff)} сум/кВт·ч)
                 </small>
               </div>
 
