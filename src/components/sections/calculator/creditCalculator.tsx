@@ -272,6 +272,8 @@ const CreditCalculator = () => {
                   <div className="credit-calc-field__subsidy-note">
                     (без первоначального взноса)
                   </div>
+
+
                 ) : (
                   <>
                     <input
@@ -456,6 +458,72 @@ const CreditCalculator = () => {
           </div>
 
         </div>
+
+        {/* TRUST BLOCK — Legal benefits (full width) */}
+        <div className="calc-trust-block">
+          <div className="calc-trust-header">
+            <span className="calc-trust-shield">🛡</span>
+            <h3>Государственные льготы для владельцев солнечных панелей</h3>
+          </div>
+          <div className="calc-trust-cards">
+
+            <div className="calc-trust-card">
+              <div className="calc-trust-icon">🏠</div>
+              <h4>Налог на имущество</h4>
+              <p>
+                Солнечные панели и оборудование полностью освобождены
+                от налога на имущество на <strong>10 лет</strong>{' '}
+                с момента установки!
+              </p>
+              <a
+                href="https://lex.uz/uz/docs/-6385716"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="calc-trust-link"
+              >
+                🔗 Основание: Статья 421 Налогового кодекса РУз
+              </a>
+            </div>
+
+            <div className="calc-trust-card">
+              <div className="calc-trust-icon">🗺</div>
+              <h4>Земельный налог</h4>
+              <p>
+                Участок, на котором установлены солнечные панели, освобождается
+                от земельного налога для физических лиц.
+                Льгота предоставляется на <strong>3 года</strong>!
+              </p>
+              <a
+                href="https://lex.uz/uz/docs/-6385716"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="calc-trust-link"
+              >
+                🔗 Основание: Статья 436 Налогового кодекса РУз
+              </a>
+            </div>
+
+            <div className="calc-trust-card">
+              <div className="calc-trust-icon">💰</div>
+              <h4>Продажа излишков государству</h4>
+              <p>
+                Государство гарантированно покупает каждый лишний кВт·ч
+                по тарифу <strong>1 000 сум</strong>. Деньги автоматически
+                переводятся на вашу банковскую карту каждый месяц!
+              </p>
+              <a
+                href="https://lex.uz/uz/docs/-6385716"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="calc-trust-link"
+              >
+                🔗 Основание: Постановление Президента РУз №ПҚ-57
+              </a>
+            </div>
+
+          </div>
+        </div>
+
       </div>
     </section>
   )
